@@ -1,0 +1,7 @@
+<map id="Piece::getDeplace" name="Piece::getDeplace">
+<area shape="rect" id="node1" title="récupere la valeur de la variable deplace" alt="" coords="429,71,568,98"/>
+<area shape="rect" id="node2" href="$d3/d05/classEchiquier.html#a3b950226df306dab4701b1ff855dd62f" title=" " alt="" coords="235,5,381,47"/>
+<area shape="rect" id="node3" href="$d1/de1/classJeu.html#a75f52af24e54045c1dac440b6e9cd640" title="permet de lancer le jeu" alt="" coords="108,71,187,98"/>
+<area shape="rect" id="node5" href="$d3/d05/classEchiquier.html#afd5fd47a72063959634696e571183b21" title=" " alt="" coords="235,123,381,164"/>
+<area shape="rect" id="node4" href="$d9/d0f/main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,71,60,98"/>
+</map>

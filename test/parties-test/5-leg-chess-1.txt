@@ -1,0 +1,7 @@
+# test un echec
+e2e4
+f7f6
+# dame donne echec
+d1h5
+g7g6
+/quit

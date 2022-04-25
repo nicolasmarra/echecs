@@ -1,0 +1,12 @@
+# teste des mouvements légaux de cavaliers blancs et noirs, 
+# avec et sans prise. Pas d'échec.
+b1c3
+d7d5
+c3d5
+g8f6
+g1f3
+b8c6
+d5f6
+e7f6
+e2e4
+/quit

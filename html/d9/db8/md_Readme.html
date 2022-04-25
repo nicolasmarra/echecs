@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title># Mini-Projet Echiquier (Programmation Objet - C++): Mini-Projet Echiquier (Programmation Objet - C++)</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname"># Mini-Projet Echiquier (Programmation Objet - C++)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Mini-Projet <a class="el" href="../../d3/d05/classEchiquier.html" title="Représente le stockage des pièces crées.">Echiquier</a> (Programmation Objet - C++) </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Dans le cadre de ma première année du cycle ingénieur en Informatique et Réseaux à Télécom Physique Strasbourg, je devais réaliser un projet de programmation orientée objet en C++. Ce projet avait pour but de mettre en pratique certaines notions de la programmation orientée objet, à savoir:</p><ul>
+<li>Héritage</li>
+<li>Polymorphisme</li>
+<li>Méthodes virtuelles</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Organisation des dossiers</h1>
+<ul>
+<li>html -&gt; contient les fichiers de la documentation en format htlm générée automatiquement par le doxygen.</li>
+<li>include -&gt; contient les headers (fichiers .h)</li>
+<li>obj -&gt; contient les objets (fichiers .o) générés par le makefile</li>
+<li>src -&gt; contient les méthodes des classes des fichiers .h, et le main</li>
+<li>tests -&gt; contient les tests <br  />
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Exécution du programme</h1>
+<p>Pour la compilation du programme, il faut utiliser la commande suivante:</p>
+<div class="fragment"><div class="line">make</div>
+</div><!-- fragment --><p>Pour supprimer les fichiers de la compilation, il faut utiliser la commande suivante:</p>
+<div class="fragment"><div class="line">make clean</div>
+</div><!-- fragment --><p>Une fois que le programme a été compilé, nous pouvons le lancer à l'aide de la commande suivante:</p>
+<p><code>./echecs</code></p>
+<p>ou alors:</p>
+<div class="fragment"><div class="line">make projet</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Niveau d'exigence du programme</h1>
+<p>J'essayais d'attendre le niveau maximum d'exigence de ce projet, cependant il y a certaines fonctionnalités qui ne sont pas pleinement fonctionnelles.</p>
+<p>Les fonctionnalités suivantes sont pleinement fonctionnelles:</p>
+<ul>
+<li>Fonctionnalité Base;</li>
+<li>Fonctionnalité Prise;</li>
+<li>Fonctionnalité Pions;</li>
+<li>Fonctionnalité Obstacle;</li>
+<li>Fonctionnalité Echec;</li>
+<li>Fonctionnalité Roque;</li>
+<li>Fonctionnalité Promotion;</li>
+</ul>
+<p>Les fonctionnalités suivantes ne sont pas pleinement fonctionnelles:</p>
+<ul>
+<li>Fonctionnalité Pat;</li>
+<li>Fonctionnalité Mat;</li>
+</ul>
+<p>La fonctionnalité suivante ne pas fonctionnelle du tout:</p>
+<ul>
+<li>Fonctionnalité Prise en passant</li>
+<li>Remarques:</li>
+</ul>
+<p>Je ne suis pas complètement sûr que la fonctionnalité Roque soit pleinement fonctionnelle car que je ne vérifie pas s'il le roi a été en échec avant ce mouvement ni après ce mouvement.</p>
+<p>La fonctionnalité Pat en soi est complètement fonctionnelle, mais je n'ai pas implémenté la règle des 3 positions répétées sucessivement, ni celle des 5O coups joués sans prise.</p>
+<p>La fonctionnalité mat n'est pas pleinement fonctionnelle parce que je n'effectue pas tous les vérifications pour savoir si le roi est bel et bien en échec et mat, j'en parlerai dans la section concernant les difficultés rencontrées.</p>
+<p>Et en ce qui concerne la fonctionnalité Prise en passant, j'ai réussi à coder dans la méthode mouvement légal du pion un algorithme qui vérifie s'il on peut effectuer ce mouvement, cependant je n'arrivais pas à vérifier si un pion a avancé de deux cases, cela est peut-être du à la modélisation de mes classes. En conséquence, j'ai du m'abstenir de cette fonctionnalité.</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Conception du programme et les difficultés rencontrées</h2>
+<p>Pour la conception de mon programme, j'ai suivi les consignes de la modélisation des classes, néanmoins pour certaines méthodes j'ai envisagé une autre conception.</p>
+<p>J'ai crée autant de sous-classes(<a class="el" href="../../db/da4/classPion.html" title="classe concrète répresentant les Pions de l&#39;échiquer, cette classe hérite de la classe pièce">Pion</a>, <a class="el" href="../../d5/d1d/classTour.html" title="classe concrète répresentant les Tours de l&#39;échiquer, cette classe hérite de la classe pièce">Tour</a>, <a class="el" href="../../df/d5e/classFou.html" title="classe concrète répresentant les Fous de l&#39;échiquer, cette classe hérite de la classe pièce">Fou</a>, <a class="el" href="../../d1/da1/classCavalier.html" title="classe concrète répresentant les Cavaliers de l&#39;échiquer, cette classe hérite de la classe pièce">Cavalier</a>, <a class="el" href="../../d5/dac/classRoi.html" title="classe concrète répresentant le Roi de l&#39;échiquer, cette classe hérite de la classe pièce">Roi</a>, <a class="el" href="../../d3/d0a/classDame.html" title="classe concrète répresentant la Dame de l&#39;échiquer, cette classe hérite de la classe pièce">Dame</a>) que de variantes de pièce, et toutes ces sous-classes héritent de classe <a class="el" href="../../d5/df0/classPiece.html" title="Classe abstraite répresentant les pièces de l&#39;échiquier.">Piece</a>.</p>
+<p>A la fin du développement de ce projet j'ai remarqué que je m'étais un peu trompé au niveau de la modelisation de mes sous-classes, car la sous-classe répresentant la <a class="el" href="../../d3/d0a/classDame.html" title="classe concrète répresentant la Dame de l&#39;échiquer, cette classe hérite de la classe pièce">Dame</a> pouvait bien hériter de la sous-classe <a class="el" href="../../df/d5e/classFou.html" title="classe concrète répresentant les Fous de l&#39;échiquer, cette classe hérite de la classe pièce">Fou</a> et ainsi que de la sous-classe <a class="el" href="../../d5/d1d/classTour.html" title="classe concrète répresentant les Tours de l&#39;échiquer, cette classe hérite de la classe pièce">Tour</a> vu que la <a class="el" href="../../d3/d0a/classDame.html" title="classe concrète répresentant la Dame de l&#39;échiquer, cette classe hérite de la classe pièce">Dame</a> combine les mouvement du <a class="el" href="../../df/d5e/classFou.html" title="classe concrète répresentant les Fous de l&#39;échiquer, cette classe hérite de la classe pièce">Fou</a> et de la <a class="el" href="../../d5/d1d/classTour.html" title="classe concrète répresentant les Tours de l&#39;échiquer, cette classe hérite de la classe pièce">Tour</a>.</p>
+<p>Ce programme contient aussi une classe <a class="el" href="../../d1/de1/classJeu.html" title="Cette classe possède un objet de classe Echiquier et assure la gestion d&#39;un coup.">Jeu</a> qui permet de gérer le jeu, une classe <a class="el" href="../../d3/d05/classEchiquier.html" title="Représente le stockage des pièces crées.">Echiquier</a>, cette classe possède un tableau [8]x[8] pointant vers une pièce allouée en mémoire et cela represente en effet l'échiquier.</p>
+<p>Dans mes fonctions qui vérifient la légalité des déplacements de chaque pièce je vérifie aussi qu'une pièce ne passe pas au-dessus d'une autre, autrement, je gère les obstacles et pour le pion je gère la prise en passant, mais je n'arrivais pas à savoir si une pièce du type <a class="el" href="../../db/da4/classPion.html" title="classe concrète répresentant les Pions de l&#39;échiquer, cette classe hérite de la classe pièce">Pion</a> a avancé de deux cases, j'ai décidé de m'abstenir de cette fonctionnalité. <br  />
+</p>
+<p>Concernant les difficultés rencontrées, à l'origine je n'avais pas toutes les connaissances utilisées au cours de ce projet, en conséquence les difficultés que j'ai rencontrées étaient techniques. En général, toutes les difficultés rencontrées étaient liées aux problèmes de gestion de la mémoire lors des déplacements de mes pièces.</p>
+<p>J'ai aussi eu difficultés pour mettre en place la fonctionnalité mat parce que je devais vérifier que toutes les pièces pouvaient se déplacer partout et que cela empêcherait l'échec du <a class="el" href="../../d5/dac/classRoi.html" title="classe concrète répresentant le Roi de l&#39;échiquer, cette classe hérite de la classe pièce">Roi</a>, mais cela engendré des erreurs de segmentation, car je simulais plusieurs déplacements pour vérifier si ce mouvement empécherait l'échet et ensuite je remettais la pièce à sa position initiale, cela devient compliqué lorsqu'il y a déjà une pièce dans la position où on a mis la pièce. J'ai décidé donc de cloner mon échiquier, mais sans succès puisque je n'arrivais pas à cloner les pièces.</p>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Auteur</h3>
+<p>Nicolas Marra - <a href="#" onclick="location.href='mai'+'lto:'+'nic'+'ol'+'asm'+'ar'+'ra1'+'2@'+'gma'+'il'+'.co'+'m'; return false;">nicol<span style="display: none;">.nosp@m.</span>asma<span style="display: none;">.nosp@m.</span>rra12<span style="display: none;">.nosp@m.</span>@gma<span style="display: none;">.nosp@m.</span>il.co<span style="display: none;">.nosp@m.</span>m</a> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

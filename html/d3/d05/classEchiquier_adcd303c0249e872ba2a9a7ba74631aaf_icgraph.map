@@ -1,0 +1,20 @@
+<map id="Echiquier::getPiece" name="Echiquier::getPiece">
+<area shape="rect" id="node1" title="Récuperer une pièce quelconque." alt="" coords="699,305,845,331"/>
+<area shape="rect" id="node2" href="$db/da4/classPion.html#a08e168fa80c397a8af6a25e962d69834" title="vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces" alt="" coords="473,5,637,47"/>
+<area shape="rect" id="node3" href="$d1/da1/classCavalier.html#a1b306fff4bf785fbd87942effe3ebb6d" title="vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces" alt="" coords="460,71,651,112"/>
+<area shape="rect" id="node4" href="$d3/d0a/classDame.html#a2b0811bde7f2c6b49571f1af06f9381e" title="vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces" alt="" coords="236,247,411,288"/>
+<area shape="rect" id="node5" href="$d5/dac/classRoi.html#a2a6f5cc4996f505cae604e925584d09b" title="vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces" alt="" coords="477,188,634,229"/>
+<area shape="rect" id="node6" href="$d1/de1/classJeu.html#a75f52af24e54045c1dac440b6e9cd640" title="permet de lancer le jeu" alt="" coords="108,465,187,491"/>
+<area shape="rect" id="node8" href="$d5/df0/classPiece.html#a638b91b10540664bca793a442de73605" title="effectue le mouvement s&#39;il est légal" alt="" coords="483,435,627,462"/>
+<area shape="rect" id="node12" href="$df/d5e/classFou.html#a9c5f17bed52ffa414384d883e03cef85" title="vérifie si le mouvement du fou est legal" alt="" coords="475,506,635,533"/>
+<area shape="rect" id="node14" href="$d3/d0a/classDame.html#a76fc22316e649b5ca972fb81a91657f4" title="vérifie si le mouvement du fou est legal" alt="" coords="467,254,643,281"/>
+<area shape="rect" id="node15" href="$d5/d1d/classTour.html#a035ad0390950058a9312cde7c8ee57f0" title="vérifie si le mouvement de la tour est legal" alt="" coords="471,597,640,623"/>
+<area shape="rect" id="node17" href="$d3/d0a/classDame.html#a5448e6f9a7032275a30064de50b60c0b" title="vérifie si le mouvement de la tour est legal" alt="" coords="465,305,646,331"/>
+<area shape="rect" id="node18" href="$d5/df0/classPiece.html#a3c42178419748ad026bdccd99c5e29cd" title="permet de promouvoir un pion" alt="" coords="257,749,389,775"/>
+<area shape="rect" id="node7" href="$d9/d0f/main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,465,60,491"/>
+<area shape="rect" id="node9" href="$d3/d05/classEchiquier.html#a5ca03c0b2bd5666df2c9eac572c75d31" title="détecte si c&#39;est échec et mat" alt="" coords="235,435,412,462"/>
+<area shape="rect" id="node10" href="$d3/d05/classEchiquier.html#a3b950226df306dab4701b1ff855dd62f" title=" " alt="" coords="250,487,397,528"/>
+<area shape="rect" id="node11" href="$d3/d05/classEchiquier.html#afd5fd47a72063959634696e571183b21" title=" " alt="" coords="250,552,397,593"/>
+<area shape="rect" id="node13" href="$df/d5e/classFou.html#a1ddb84f9c151d590867b98c1e40c7ce2" title="vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces" alt="" coords="244,617,403,659"/>
+<area shape="rect" id="node16" href="$d5/d1d/classTour.html#a7fb7fb3336c3541853ee0f039331ff54" title="vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces" alt="" coords="242,683,405,724"/>
+</map>

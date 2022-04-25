@@ -1,0 +1,10 @@
+e2e4 
+e7e5 
+g1f3 
+b8c6 
+d1d2 
+d2d3 
+g8f6
+c1g5 
+f8e7 
+/quit

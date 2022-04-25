@@ -1,0 +1,19 @@
+# teste des mouvements legaux du fou. Ainsi qu'une prise par fou.
+d2d4 
+d7d5
+c1g5 
+# coup noir suivant illegal
+f8b5
+# noir encore
+f7f6
+# coup blanc suivant illegal
+g5d8
+# blanc encore
+g5h4
+# coup noir suivant illegal
+c8b7
+# noir encore
+c8d8
+# noir encore
+c8f5
+/quit

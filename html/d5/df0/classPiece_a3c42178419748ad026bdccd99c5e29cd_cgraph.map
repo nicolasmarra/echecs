@@ -1,0 +1,9 @@
+<map id="Piece::promotion" name="Piece::promotion">
+<area shape="rect" id="node1" title="permet de promouvoir un pion" alt="" coords="5,132,137,159"/>
+<area shape="rect" id="node2" href="$d5/df0/classPiece.html#a5abbf43c186befaaa07ad6219ba1bd3d" title="récupere la couleur d&#39;une pièce" alt="" coords="199,5,335,32"/>
+<area shape="rect" id="node3" href="$d3/d05/classEchiquier.html#adcd303c0249e872ba2a9a7ba74631aaf" title="Récuperer une pièce quelconque." alt="" coords="193,107,340,133"/>
+<area shape="rect" id="node4" href="$d3/d72/classSquare.html#ab230deeb6845356ffd162a967d205eac" title="permet de récuperer la ligne de la case actuelle" alt="" coords="396,107,501,133"/>
+<area shape="rect" id="node5" href="$d3/d72/classSquare.html#a3b63de9d7d779fa8ba202a85c322c3ac" title="permet de récuperer la colonne de la case actuelle" alt="" coords="397,157,501,184"/>
+<area shape="rect" id="node6" href="$d3/d05/classEchiquier.html#aafefde137f128656ee9ae5cb96af8fac" title="Pose une pièce à une position donnée." alt="" coords="185,157,348,184"/>
+<area shape="rect" id="node7" href="$d5/df0/classPiece.html#a98e365e736d6a266670a6d2d1b3dab43" title="récupere le nom d&#39;une pièce" alt="" coords="205,259,328,285"/>
+</map>
