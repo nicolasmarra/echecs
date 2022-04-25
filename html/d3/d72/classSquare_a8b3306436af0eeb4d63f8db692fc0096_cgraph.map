@@ -1,6 +1,0 @@
-<map id="Square::setSquare" name="Square::setSquare">
-<area shape="rect" id="node1" title="permet de changer l&#39;indice d&#39;une case" alt="" coords="5,56,145,83"/>
-<area shape="rect" id="node2" href="$d3/d72/classSquare.html#ab230deeb6845356ffd162a967d205eac" title="permet de récuperer la ligne de la case actuelle" alt="" coords="211,5,316,32"/>
-<area shape="rect" id="node3" href="$d3/d72/classSquare.html#a3b63de9d7d779fa8ba202a85c322c3ac" title="permet de récuperer la colonne de la case actuelle" alt="" coords="211,56,315,83"/>
-<area shape="rect" id="node4" href="$d3/d72/classSquare.html#adb60dc94ccff8cc3549a949c69d22b8a" title="permet de changer l&#39;indice d&#39;une case" alt="" coords="193,107,333,133"/>
-</map>

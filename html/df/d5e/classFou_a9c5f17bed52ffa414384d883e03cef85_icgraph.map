@@ -1,4 +1,0 @@
-<map id="Fou::mouvement_fou" name="Fou::mouvement_fou">
-<area shape="rect" id="node1" title="vérifie si le mouvement du fou est legal" alt="" coords="212,13,372,39"/>
-<area shape="rect" id="node2" href="$df/d5e/classFou.html#a1ddb84f9c151d590867b98c1e40c7ce2" title="vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces" alt="" coords="5,5,164,47"/>
-</map>

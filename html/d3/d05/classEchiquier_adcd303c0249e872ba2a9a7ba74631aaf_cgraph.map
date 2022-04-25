@@ -1,5 +1,0 @@
-<map id="Echiquier::getPiece" name="Echiquier::getPiece">
-<area shape="rect" id="node1" title="Récuperer une pièce quelconque." alt="" coords="5,31,152,57"/>
-<area shape="rect" id="node2" href="$d3/d72/classSquare.html#ab230deeb6845356ffd162a967d205eac" title="permet de récuperer la ligne de la case actuelle" alt="" coords="200,5,305,32"/>
-<area shape="rect" id="node3" href="$d3/d72/classSquare.html#a3b63de9d7d779fa8ba202a85c322c3ac" title="permet de récuperer la colonne de la case actuelle" alt="" coords="201,56,305,83"/>
-</map>
