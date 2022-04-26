@@ -1,6 +1,0 @@
-<map id="Piece::est_mouvement_legal" name="Piece::est_mouvement_legal">
-<area shape="rect" id="node1" title="vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces" alt="" coords="460,23,631,65"/>
-<area shape="rect" id="node2" href="$d3/d05/classEchiquier.html#a5ca03c0b2bd5666df2c9eac572c75d31" title="détecte si c&#39;est échec et mat" alt="" coords="235,5,412,32"/>
-<area shape="rect" id="node3" href="$d1/de1/classJeu.html#a75f52af24e54045c1dac440b6e9cd640" title="permet de lancer le jeu" alt="" coords="108,31,187,57"/>
-<area shape="rect" id="node4" href="$d9/d0f/main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,57"/>
-</map>

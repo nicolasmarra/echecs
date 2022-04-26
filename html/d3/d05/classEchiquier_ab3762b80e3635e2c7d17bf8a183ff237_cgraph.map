@@ -1,4 +1,0 @@
-<map id="Echiquier::detecter_echec" name="Echiquier::detecter_echec">
-<area shape="rect" id="node1" title="détecte si un roi est en échec" alt="" coords="5,5,149,47"/>
-<area shape="rect" id="node2" href="$d5/df0/classPiece.html#a651a9c3ced42926319c07887ed410196" title="récupere la position d&#39;une pièce" alt="" coords="197,13,336,39"/>
-</map>

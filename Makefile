@@ -26,7 +26,10 @@ $(OBJ): $(OBJDIR)/%.o:  $(SRCDIR)/%.cc $(INCLUDES)
 
 projet: 
 	./echecs
-	
+
+docs:
+	@doxygen
+
 clean:
 	rm -rf $(OBJDIR)/*.o
 	rm -rf $(OBJDIR)/*.gcda

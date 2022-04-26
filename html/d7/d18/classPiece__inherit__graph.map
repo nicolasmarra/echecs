@@ -1,9 +1,0 @@
-<map id="Piece" name="Piece">
-<area shape="rect" id="node1" title="Classe abstraite répresentant les pièces de l&#39;échiquier." alt="" coords="545,5,737,303"/>
-<area shape="rect" id="node2" href="$d1/da1/classCavalier.html" title="classe concrète répresentant les Cavaliers de l&#39;échiquer, cette classe hérite de la classe pièce" alt="" coords="5,365,197,501"/>
-<area shape="rect" id="node3" href="$d3/d0a/classDame.html" title="classe concrète répresentant la Dame de l&#39;échiquer, cette classe hérite de la classe pièce" alt="" coords="221,351,413,516"/>
-<area shape="rect" id="node4" href="$df/d5e/classFou.html" title="classe concrète répresentant les Fous de l&#39;échiquer, cette classe hérite de la classe pièce" alt="" coords="437,358,629,509"/>
-<area shape="rect" id="node5" href="$db/da4/classPion.html" title="classe concrète répresentant les Pions de l&#39;échiquer, cette classe hérite de la classe pièce" alt="" coords="653,351,845,516"/>
-<area shape="rect" id="node6" href="$d5/dac/classRoi.html" title="classe concrète répresentant le Roi de l&#39;échiquer, cette classe hérite de la classe pièce" alt="" coords="869,365,1061,501"/>
-<area shape="rect" id="node7" href="$d5/d1d/classTour.html" title="classe concrète répresentant les Tours de l&#39;échiquer, cette classe hérite de la classe pièce" alt="" coords="1085,358,1277,509"/>
-</map>

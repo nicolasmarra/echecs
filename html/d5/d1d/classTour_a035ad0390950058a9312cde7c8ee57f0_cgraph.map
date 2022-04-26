@@ -1,9 +1,0 @@
-<map id="Tour::mouvement_tour" name="Tour::mouvement_tour">
-<area shape="rect" id="node1" title="vérifie si le mouvement de la tour est legal" alt="" coords="5,132,175,159"/>
-<area shape="rect" id="node2" href="$d5/df0/classPiece.html#a5abbf43c186befaaa07ad6219ba1bd3d" title="récupere la couleur d&#39;une pièce" alt="" coords="228,5,364,32"/>
-<area shape="rect" id="node3" href="$d3/d05/classEchiquier.html#adcd303c0249e872ba2a9a7ba74631aaf" title="Récuperer une pièce quelconque." alt="" coords="223,107,369,133"/>
-<area shape="rect" id="node4" href="$d3/d72/classSquare.html#ab230deeb6845356ffd162a967d205eac" title="permet de récuperer la ligne de la case actuelle" alt="" coords="417,81,523,108"/>
-<area shape="rect" id="node5" href="$d3/d72/classSquare.html#a3b63de9d7d779fa8ba202a85c322c3ac" title="permet de récuperer la colonne de la case actuelle" alt="" coords="418,132,522,159"/>
-<area shape="rect" id="node6" href="$d5/df0/classPiece.html#a651a9c3ced42926319c07887ed410196" title="récupere la position d&#39;une pièce" alt="" coords="227,208,365,235"/>
-<area shape="rect" id="node7" href="$d3/d72/classSquare.html#adb60dc94ccff8cc3549a949c69d22b8a" title="permet de changer l&#39;indice d&#39;une case" alt="" coords="226,259,366,285"/>
-</map>

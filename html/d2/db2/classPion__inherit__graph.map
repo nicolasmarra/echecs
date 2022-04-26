@@ -1,4 +1,0 @@
-<map id="Pion" name="Pion">
-<area shape="rect" id="node1" title="classe concrète répresentant les Pions de l&#39;échiquer, cette classe hérite de la classe pièce" alt="" coords="5,351,197,516"/>
-<area shape="rect" id="node2" href="$d5/df0/classPiece.html" title="Classe abstraite répresentant les pièces de l&#39;échiquier." alt="" coords="5,5,197,303"/>
-</map>
