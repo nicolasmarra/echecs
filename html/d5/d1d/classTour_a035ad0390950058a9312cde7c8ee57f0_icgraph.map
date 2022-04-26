@@ -1,0 +1,4 @@
+<map id="Tour::mouvement_tour" name="Tour::mouvement_tour">
+<area shape="rect" id="node1" title="vérifie si le mouvement de la tour est legal" alt="" coords="216,13,385,39"/>
+<area shape="rect" id="node2" href="$d5/d1d/classTour.html#a7fb7fb3336c3541853ee0f039331ff54" title="vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces" alt="" coords="5,5,168,47"/>
+</map>

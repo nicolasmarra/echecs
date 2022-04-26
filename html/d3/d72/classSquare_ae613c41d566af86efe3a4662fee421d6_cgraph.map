@@ -1,0 +1,5 @@
+<map id="Square::to_string" name="Square::to_string">
+<area shape="rect" id="node1" title="permet de convertir en notation algébrique l&#39;indice d&#39;une case" alt="" coords="5,31,137,57"/>
+<area shape="rect" id="node2" href="$d3/d72/classSquare.html#ab230deeb6845356ffd162a967d205eac" title="permet de récuperer la ligne de la case actuelle" alt="" coords="185,5,291,32"/>
+<area shape="rect" id="node3" href="$d3/d72/classSquare.html#a3b63de9d7d779fa8ba202a85c322c3ac" title="permet de récuperer la colonne de la case actuelle" alt="" coords="186,56,290,83"/>
+</map>

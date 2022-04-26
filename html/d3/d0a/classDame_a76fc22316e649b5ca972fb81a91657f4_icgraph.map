@@ -1,0 +1,4 @@
+<map id="Dame::mouvement_fou" name="Dame::mouvement_fou">
+<area shape="rect" id="node1" title="vérifie si le mouvement du fou est legal" alt="" coords="228,13,404,39"/>
+<area shape="rect" id="node2" href="$d3/d0a/classDame.html#a2b0811bde7f2c6b49571f1af06f9381e" title="vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces" alt="" coords="5,5,180,47"/>
+</map>

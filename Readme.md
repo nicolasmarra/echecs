@@ -40,7 +40,7 @@ make projet
 
 # Niveau d'exigence du programme
  
-J'essayais d'attendre le niveau maximum d'exigence de ce projet, cependant il y a certaines fonctionnalités qui ne sont pas pleinement fonctionnelles.
+J'ai essayé d'attendre le niveau maximum d'exigence de ce projet, cependant il y a certaines fonctionnalités qui ne sont pas pleinement fonctionnelles.
 
 Les fonctionnalités suivantes sont pleinement fonctionnelles:
 

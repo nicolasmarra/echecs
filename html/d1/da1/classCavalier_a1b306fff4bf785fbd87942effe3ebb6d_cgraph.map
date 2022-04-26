@@ -1,0 +1,8 @@
+<map id="Cavalier::est_mouvement_legal" name="Cavalier::est_mouvement_legal">
+<area shape="rect" id="node1" title="vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces" alt="" coords="5,99,196,141"/>
+<area shape="rect" id="node2" href="$d5/df0/classPiece.html#a5abbf43c186befaaa07ad6219ba1bd3d" title="récupere la couleur d&#39;une pièce" alt="" coords="249,5,385,32"/>
+<area shape="rect" id="node3" href="$d3/d05/classEchiquier.html#adcd303c0249e872ba2a9a7ba74631aaf" title="Récuperer une pièce quelconque." alt="" coords="244,107,391,133"/>
+<area shape="rect" id="node4" href="$d3/d72/classSquare.html#ab230deeb6845356ffd162a967d205eac" title="permet de récuperer la ligne de la case actuelle" alt="" coords="439,81,544,108"/>
+<area shape="rect" id="node5" href="$d3/d72/classSquare.html#a3b63de9d7d779fa8ba202a85c322c3ac" title="permet de récuperer la colonne de la case actuelle" alt="" coords="439,132,543,159"/>
+<area shape="rect" id="node6" href="$d5/df0/classPiece.html#a651a9c3ced42926319c07887ed410196" title="récupere la position d&#39;une pièce" alt="" coords="248,208,387,235"/>
+</map>

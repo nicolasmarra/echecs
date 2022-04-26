@@ -1,0 +1,12 @@
+<map id="Piece::mouvement" name="Piece::mouvement">
+<area shape="rect" id="node1" title="effectue le mouvement s&#39;il est légal" alt="" coords="5,136,149,163"/>
+<area shape="rect" id="node2" href="$d3/d05/classEchiquier.html#adcd303c0249e872ba2a9a7ba74631aaf" title="Récuperer une pièce quelconque." alt="" coords="205,86,352,112"/>
+<area shape="rect" id="node3" href="$d3/d72/classSquare.html#ab230deeb6845356ffd162a967d205eac" title="permet de récuperer la ligne de la case actuelle" alt="" coords="425,35,531,62"/>
+<area shape="rect" id="node5" href="$d5/df0/classPiece.html#a651a9c3ced42926319c07887ed410196" title="récupere la position d&#39;une pièce" alt="" coords="209,136,348,163"/>
+<area shape="rect" id="node6" href="$d3/d05/classEchiquier.html#aafefde137f128656ee9ae5cb96af8fac" title="Pose une pièce à une position donnée." alt="" coords="197,35,360,62"/>
+<area shape="rect" id="node7" href="$d5/df0/classPiece.html#af9bdce9f54d2aa7edd794f521f5ca086" title="affecte une valeur à la pièce déplace" alt="" coords="209,187,348,214"/>
+<area shape="rect" id="node8" href="$d5/df0/classPiece.html#a3e430adecd768f8eb615ffb1fe6ab80e" title="affecte une position à une pièce" alt="" coords="210,238,347,264"/>
+<area shape="rect" id="node10" href="$d5/df0/classPiece.html#a98e365e736d6a266670a6d2d1b3dab43" title="récupere le nom d&#39;une pièce" alt="" coords="217,288,340,315"/>
+<area shape="rect" id="node4" href="$d3/d72/classSquare.html#a3b63de9d7d779fa8ba202a85c322c3ac" title="permet de récuperer la colonne de la case actuelle" alt="" coords="426,86,530,112"/>
+<area shape="rect" id="node9" href="$d3/d72/classSquare.html#adb60dc94ccff8cc3549a949c69d22b8a" title="permet de changer l&#39;indice d&#39;une case" alt="" coords="408,238,548,264"/>
+</map>

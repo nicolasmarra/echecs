@@ -1,0 +1,6 @@
+<map id="Echiquier::affiche" name="Echiquier::affiche">
+<area shape="rect" id="node1" title="affiche l&#39;échiquier" alt="" coords="251,31,385,57"/>
+<area shape="rect" id="node2" href="$d1/de1/classJeu.html#a7931f8054847abc19e33e73967a3807e" title="affiche l&#39;échiquier pour que l&#39;utilisateur se rende compte de la nouvelle position" alt="" coords="108,5,203,32"/>
+<area shape="rect" id="node3" href="$d1/de1/classJeu.html#a75f52af24e54045c1dac440b6e9cd640" title="permet de lancer le jeu" alt="" coords="116,56,195,83"/>
+<area shape="rect" id="node4" href="$d9/d0f/main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,60,83"/>
+</map>

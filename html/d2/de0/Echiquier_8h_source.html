@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title># Mini-Projet Echiquier (Programmation Objet - C++):  Fichier source de include/Echiquier.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname"># Mini-Projet Echiquier (Programmation Objet - C++)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Echiquier.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d2/de0/Echiquier_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _ECHIQUIER_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _ECHIQUIER_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/dc9/Piece_8h.html">Piece.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d74/Square_8h.html">Square.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d56/Variant_8h.html">Variant.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d3/d05/classEchiquier.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/d05/classEchiquier.html">Echiquier</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//--------atributs--------</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../d3/d05/classEchiquier.html#a8258e9d4913c266fa19eb0cea4127558">   16</a></span>&#160;    <a class="code" href="../../d5/df0/classPiece.html">Piece</a> *<a class="code" href="../../d3/d05/classEchiquier.html#a8258e9d4913c266fa19eb0cea4127558">echiquier</a>[8][8];</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d3/d05/classEchiquier.html#a378f410334564b8472e5fb1f3684403f">   17</a></span>&#160;    <a class="code" href="../../d5/df0/classPiece.html">Piece</a> *<a class="code" href="../../d3/d05/classEchiquier.html#a378f410334564b8472e5fb1f3684403f">roiBlanc</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d3/d05/classEchiquier.html#affe1adf233c1bf21b6574b0f2ca3b0a7">   18</a></span>&#160;    <a class="code" href="../../d5/df0/classPiece.html">Piece</a> *<a class="code" href="../../d3/d05/classEchiquier.html#affe1adf233c1bf21b6574b0f2ca3b0a7">roiNoir</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d3/d05/classEchiquier.html#ac1a66ccdc79322b797d2ff7df5c22b3d">   19</a></span>&#160;    <a class="code" href="../../d5/df0/classPiece.html">Piece</a> *<a class="code" href="../../d3/d05/classEchiquier.html#ac1a66ccdc79322b797d2ff7df5c22b3d">piecesb</a>[8];</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d3/d05/classEchiquier.html#a85439304082fc3b382223e3fcbf6a322">   20</a></span>&#160;    <a class="code" href="../../d5/df0/classPiece.html">Piece</a> *<a class="code" href="../../d3/d05/classEchiquier.html#a85439304082fc3b382223e3fcbf6a322">piecesn</a>[8];</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d3/d05/classEchiquier.html#a5a72a72573719a53b15a99395008890f">   21</a></span>&#160;    <a class="code" href="../../d5/df0/classPiece.html">Piece</a> *<a class="code" href="../../d3/d05/classEchiquier.html#a5a72a72573719a53b15a99395008890f">pionsb</a>[8];</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d3/d05/classEchiquier.html#a2f4e8b17513c920f8393b18173fc8677">   22</a></span>&#160;    <a class="code" href="../../d5/df0/classPiece.html">Piece</a> *<a class="code" href="../../d3/d05/classEchiquier.html#a2f4e8b17513c920f8393b18173fc8677">pionsn</a>[8];</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/*constructeur*/</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../d3/d05/classEchiquier.html#a0aab8ba63f69aa9425d4e4a9c5cc578a">Echiquier</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">/*destructeur*/</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../d3/d05/classEchiquier.html#af0b910349d14c53551997a8e5a9cbd3f">~Echiquier</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="../../d5/df0/classPiece.html">Piece</a> *<a class="code" href="../../d3/d05/classEchiquier.html#adcd303c0249e872ba2a9a7ba74631aaf">getPiece</a>(<a class="code" href="../../d3/d72/classSquare.html">Square</a> <span class="keyword">const</span> &amp;position) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="../../d5/df0/classPiece.html">Piece</a> *<a class="code" href="../../d3/d05/classEchiquier.html#a655af993438ca19587c21cdd1298d625">getRoi</a>(<a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> couleur);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/d05/classEchiquier.html#aa2b858a0a746a5d680447623fa31389b">setRoi</a>(<a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> couleur);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/d05/classEchiquier.html#aafefde137f128656ee9ae5cb96af8fac">pose_piece</a>(<a class="code" href="../../d5/df0/classPiece.html">Piece</a> *p, <a class="code" href="../../d3/d72/classSquare.html">Square</a> <span class="keyword">const</span> &amp;position);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/d05/classEchiquier.html#af22265120d527dfb2fa91187c4ce01cf">affiche</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/d05/classEchiquier.html#af0b47dd985820c255f9bba385dc101bc">alloc_mem_echiquier</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="../../d3/d05/classEchiquier.html#a266617bf2d5b793509d3eb000a36dbd3">pgn_piece_name</a>(<span class="keywordtype">string</span> <span class="keyword">const</span> name, <span class="keywordtype">bool</span> view_pawn,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                          <span class="keywordtype">bool</span> view_color) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="../../d3/d05/classEchiquier.html#a00d81e48b5b46016bd826740867b7b3c">canonical_position</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/d05/classEchiquier.html#a6b45480a743e9e67a9fd8ed0076af769">est_case_vide</a>(<a class="code" href="../../d3/d72/classSquare.html">Square</a> <span class="keyword">const</span> &amp;position) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/d05/classEchiquier.html#ab3762b80e3635e2c7d17bf8a183ff237">detecter_echec</a>(<a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> <a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/d05/classEchiquier.html#a5ca03c0b2bd5666df2c9eac572c75d31">detecter_mat</a>(<a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> <a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/d05/classEchiquier.html#aff4f7afbc29ffb7616dd53364574305a">detecter_pat</a>(<a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> <a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/d05/classEchiquier.html#a86b33fd7be22c791323067ab354d43e8">enlever_check</a>(<a class="code" href="../../d3/d72/classSquare.html">Square</a> <span class="keyword">const</span> &amp;position, <a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> <a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/d05/classEchiquier.html#afd5fd47a72063959634696e571183b21">executer_petitroque</a>(<a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> <a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/d05/classEchiquier.html#a3b950226df306dab4701b1ff855dd62f">executer_grandroque</a>(<a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> <a class="code" href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;};</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassTour_html"><div class="ttname"><a href="../../d5/d1d/classTour.html">Tour</a></div><div class="ttdoc">classe concrète répresentant les Tours de l'échiquer, cette classe hérite de la classe pièce</div><div class="ttdef"><b>Definition:</b> Variant.h:55</div></div>
+<div class="ttc" id="aclassDame_html"><div class="ttname"><a href="../../d3/d0a/classDame.html">Dame</a></div><div class="ttdoc">classe concrète répresentant la Dame de l'échiquer, cette classe hérite de la classe pièce</div><div class="ttdef"><b>Definition:</b> Variant.h:152</div></div>
+<div class="ttc" id="aPiece_8h_html"><div class="ttname"><a href="../../db/dc9/Piece_8h.html">Piece.h</a></div></div>
+<div class="ttc" id="aclassFou_html"><div class="ttname"><a href="../../df/d5e/classFou.html">Fou</a></div><div class="ttdoc">classe concrète répresentant les Fous de l'échiquer, cette classe hérite de la classe pièce</div><div class="ttdef"><b>Definition:</b> Variant.h:117</div></div>
+<div class="ttc" id="aclassEchiquier_html_a00d81e48b5b46016bd826740867b7b3c"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#a00d81e48b5b46016bd826740867b7b3c">Echiquier::canonical_position</a></div><div class="ttdeci">string canonical_position() const</div><div class="ttdoc">affiche le contenue de chaque case de l'échiquier</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:161</div></div>
+<div class="ttc" id="aclassEchiquier_html_ab3762b80e3635e2c7d17bf8a183ff237"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#ab3762b80e3635e2c7d17bf8a183ff237">Echiquier::detecter_echec</a></div><div class="ttdeci">bool detecter_echec(Couleur Couleur)</div><div class="ttdoc">détecte si un roi est en échec</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:176</div></div>
+<div class="ttc" id="aclassEchiquier_html_aafefde137f128656ee9ae5cb96af8fac"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#aafefde137f128656ee9ae5cb96af8fac">Echiquier::pose_piece</a></div><div class="ttdeci">void pose_piece(Piece *p, Square const &amp;position)</div><div class="ttdoc">Pose une pièce à une position donnée.</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:99</div></div>
+<div class="ttc" id="aclassEchiquier_html_a6b45480a743e9e67a9fd8ed0076af769"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#a6b45480a743e9e67a9fd8ed0076af769">Echiquier::est_case_vide</a></div><div class="ttdeci">bool est_case_vide(Square const &amp;position) const</div><div class="ttdoc">vérifie si une case est vide</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:154</div></div>
+<div class="ttc" id="aclassEchiquier_html_af0b47dd985820c255f9bba385dc101bc"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#af0b47dd985820c255f9bba385dc101bc">Echiquier::alloc_mem_echiquier</a></div><div class="ttdeci">void alloc_mem_echiquier()</div><div class="ttdoc">initiatilse toutes les cases de l'échiquier à NULL et alloue des vecteurs piecesb,...</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:103</div></div>
+<div class="ttc" id="aclassEchiquier_html_a378f410334564b8472e5fb1f3684403f"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#a378f410334564b8472e5fb1f3684403f">Echiquier::roiBlanc</a></div><div class="ttdeci">Piece * roiBlanc</div><div class="ttdef"><b>Definition:</b> Echiquier.h:17</div></div>
+<div class="ttc" id="aclassEchiquier_html_a266617bf2d5b793509d3eb000a36dbd3"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#a266617bf2d5b793509d3eb000a36dbd3">Echiquier::pgn_piece_name</a></div><div class="ttdeci">string pgn_piece_name(string const name, bool view_pawn, bool view_color) const</div><div class="ttdoc">rendre le symbole utilisé dans la notation PGN</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:111</div></div>
+<div class="ttc" id="aclassEchiquier_html"><div class="ttname"><a href="../../d3/d05/classEchiquier.html">Echiquier</a></div><div class="ttdoc">Représente le stockage des pièces crées.</div><div class="ttdef"><b>Definition:</b> Echiquier.h:12</div></div>
+<div class="ttc" id="aclassEchiquier_html_a5ca03c0b2bd5666df2c9eac572c75d31"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#a5ca03c0b2bd5666df2c9eac572c75d31">Echiquier::detecter_mat</a></div><div class="ttdeci">bool detecter_mat(Couleur Couleur)</div><div class="ttdoc">détecte si c'est échec et mat</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:216</div></div>
+<div class="ttc" id="aPiece_8h_html_aa304d0ca681f782b1d7735da33037dd7"><div class="ttname"><a href="../../db/dc9/Piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a></div><div class="ttdeci">Couleur</div><div class="ttdoc">ensemble statique répresentant les couleurs des pièces</div><div class="ttdef"><b>Definition:</b> Piece.h:16</div></div>
+<div class="ttc" id="aclassEchiquier_html_a3b950226df306dab4701b1ff855dd62f"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#a3b950226df306dab4701b1ff855dd62f">Echiquier::executer_grandroque</a></div><div class="ttdeci">bool executer_grandroque(Couleur Couleur)</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:334</div></div>
+<div class="ttc" id="aclassEchiquier_html_affe1adf233c1bf21b6574b0f2ca3b0a7"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#affe1adf233c1bf21b6574b0f2ca3b0a7">Echiquier::roiNoir</a></div><div class="ttdeci">Piece * roiNoir</div><div class="ttdef"><b>Definition:</b> Echiquier.h:18</div></div>
+<div class="ttc" id="aclassEchiquier_html_a0aab8ba63f69aa9425d4e4a9c5cc578a"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#a0aab8ba63f69aa9425d4e4a9c5cc578a">Echiquier::Echiquier</a></div><div class="ttdeci">Echiquier()</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:10</div></div>
+<div class="ttc" id="aclassEchiquier_html_adcd303c0249e872ba2a9a7ba74631aaf"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#adcd303c0249e872ba2a9a7ba74631aaf">Echiquier::getPiece</a></div><div class="ttdeci">Piece * getPiece(Square const &amp;position) const</div><div class="ttdoc">Récuperer une pièce quelconque.</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:95</div></div>
+<div class="ttc" id="aclassEchiquier_html_a2f4e8b17513c920f8393b18173fc8677"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#a2f4e8b17513c920f8393b18173fc8677">Echiquier::pionsn</a></div><div class="ttdeci">Piece * pionsn[8]</div><div class="ttdef"><b>Definition:</b> Echiquier.h:22</div></div>
+<div class="ttc" id="aclassEchiquier_html_a8258e9d4913c266fa19eb0cea4127558"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#a8258e9d4913c266fa19eb0cea4127558">Echiquier::echiquier</a></div><div class="ttdeci">Piece * echiquier[8][8]</div><div class="ttdef"><b>Definition:</b> Echiquier.h:16</div></div>
+<div class="ttc" id="aJeu_8cc_html_a217e727d624f94ec09f6cc183780632c"><div class="ttname"><a href="../../da/dc2/Jeu_8cc.html#a217e727d624f94ec09f6cc183780632c">saisie_correcte_grandroque</a></div><div class="ttdeci">bool saisie_correcte_grandroque(string const &amp;cmd)</div><div class="ttdef"><b>Definition:</b> Jeu.cc:26</div></div>
+<div class="ttc" id="aclassPiece_html"><div class="ttname"><a href="../../d5/df0/classPiece.html">Piece</a></div><div class="ttdoc">Classe abstraite répresentant les pièces de l'échiquier.</div><div class="ttdef"><b>Definition:</b> Piece.h:22</div></div>
+<div class="ttc" id="aclassCavalier_html"><div class="ttname"><a href="../../d1/da1/classCavalier.html">Cavalier</a></div><div class="ttdoc">classe concrète répresentant les Cavaliers de l'échiquer, cette classe hérite de la classe pièce</div><div class="ttdef"><b>Definition:</b> Variant.h:90</div></div>
+<div class="ttc" id="aclassEchiquier_html_af0b910349d14c53551997a8e5a9cbd3f"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#af0b910349d14c53551997a8e5a9cbd3f">Echiquier::~Echiquier</a></div><div class="ttdeci">~Echiquier()</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:47</div></div>
+<div class="ttc" id="aSquare_8h_html"><div class="ttname"><a href="../../df/d74/Square_8h.html">Square.h</a></div></div>
+<div class="ttc" id="aclassEchiquier_html_a85439304082fc3b382223e3fcbf6a322"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#a85439304082fc3b382223e3fcbf6a322">Echiquier::piecesn</a></div><div class="ttdeci">Piece * piecesn[8]</div><div class="ttdef"><b>Definition:</b> Echiquier.h:20</div></div>
+<div class="ttc" id="aVariant_8h_html"><div class="ttname"><a href="../../de/d56/Variant_8h.html">Variant.h</a></div></div>
+<div class="ttc" id="aclassPion_html"><div class="ttname"><a href="../../db/da4/classPion.html">Pion</a></div><div class="ttdoc">classe concrète répresentant les Pions de l'échiquer, cette classe hérite de la classe pièce</div><div class="ttdef"><b>Definition:</b> Variant.h:12</div></div>
+<div class="ttc" id="aclassRoi_html"><div class="ttname"><a href="../../d5/dac/classRoi.html">Roi</a></div><div class="ttdoc">classe concrète répresentant le Roi de l'échiquer, cette classe hérite de la classe pièce</div><div class="ttdef"><b>Definition:</b> Variant.h:200</div></div>
+<div class="ttc" id="aclassJeu_html"><div class="ttname"><a href="../../d1/de1/classJeu.html">Jeu</a></div><div class="ttdoc">Cette classe possède un objet de classe Echiquier et assure la gestion d'un coup.</div><div class="ttdef"><b>Definition:</b> Jeu.h:11</div></div>
+<div class="ttc" id="aclassEchiquier_html_ac1a66ccdc79322b797d2ff7df5c22b3d"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#ac1a66ccdc79322b797d2ff7df5c22b3d">Echiquier::piecesb</a></div><div class="ttdeci">Piece * piecesb[8]</div><div class="ttdef"><b>Definition:</b> Echiquier.h:19</div></div>
+<div class="ttc" id="aclassSquare_html"><div class="ttname"><a href="../../d3/d72/classSquare.html">Square</a></div><div class="ttdoc">Représente case une de l'échiquier.</div><div class="ttdef"><b>Definition:</b> Square.h:12</div></div>
+<div class="ttc" id="aclassEchiquier_html_af22265120d527dfb2fa91187c4ce01cf"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#af22265120d527dfb2fa91187c4ce01cf">Echiquier::affiche</a></div><div class="ttdeci">void affiche() const</div><div class="ttdoc">affiche l'échiquier</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:71</div></div>
+<div class="ttc" id="aclassEchiquier_html_aa2b858a0a746a5d680447623fa31389b"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#aa2b858a0a746a5d680447623fa31389b">Echiquier::setRoi</a></div><div class="ttdeci">void setRoi(Couleur couleur)</div><div class="ttdoc">Affecte un pointeur NULL à une pièce du type Roi.</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:284</div></div>
+<div class="ttc" id="aclassEchiquier_html_a86b33fd7be22c791323067ab354d43e8"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#a86b33fd7be22c791323067ab354d43e8">Echiquier::enlever_check</a></div><div class="ttdeci">bool enlever_check(Square const &amp;position, Couleur Couleur)</div><div class="ttdoc">détecte si l'on peut empecher l'échec</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:197</div></div>
+<div class="ttc" id="amain_8cc_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="../../d9/d0f/main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> main.cc:6</div></div>
+<div class="ttc" id="aclassEchiquier_html_aff4f7afbc29ffb7616dd53364574305a"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#aff4f7afbc29ffb7616dd53364574305a">Echiquier::detecter_pat</a></div><div class="ttdeci">bool detecter_pat(Couleur Couleur)</div><div class="ttdoc">détecte si c'est pat</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:261</div></div>
+<div class="ttc" id="aclassEchiquier_html_a655af993438ca19587c21cdd1298d625"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#a655af993438ca19587c21cdd1298d625">Echiquier::getRoi</a></div><div class="ttdeci">Piece * getRoi(Couleur couleur)</div><div class="ttdoc">Récuperer une pièce du type Roi.</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:291</div></div>
+<div class="ttc" id="aclassEchiquier_html_a5a72a72573719a53b15a99395008890f"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#a5a72a72573719a53b15a99395008890f">Echiquier::pionsb</a></div><div class="ttdeci">Piece * pionsb[8]</div><div class="ttdef"><b>Definition:</b> Echiquier.h:21</div></div>
+<div class="ttc" id="aclassEchiquier_html_afd5fd47a72063959634696e571183b21"><div class="ttname"><a href="../../d3/d05/classEchiquier.html#afd5fd47a72063959634696e571183b21">Echiquier::executer_petitroque</a></div><div class="ttdeci">bool executer_petitroque(Couleur Couleur)</div><div class="ttdef"><b>Definition:</b> Echiquier.cc:298</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
