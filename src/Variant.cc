@@ -13,8 +13,6 @@ Pion::Pion(Square position) : Piece(Noir, "\u265F", position) {}
 
 Pion::~Pion() {}
 
-
-
 bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
 
     if (e.getPiece(position) != NULL)
@@ -39,12 +37,22 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
         if (getCouleur() == Blanc) {
             if (compare == 2) {
 
+                setDouble_pas(false);
+
                 pos1.setSquare(pos.getX() + 1, pos.getY());
                 if (pos.getX() != 1 || e.getPiece(pos1) != NULL)
                     return false;
+
+                if (getPosition().getY() == position.getY() &&
+                    e.getPiece(position) == nullptr) {
+                    // Si le pion avance de deux cases et n'est pas en train de
+                    // prendre une pièce, il peut être pris en passant par un
+                    // pion adverse
+                    setDouble_pas(true);
+                }
                 // Les pions blancs commencent à la ligne 2, alors
-                              // ils ne peuvent avancer que de
-                              // deux cases depuis leur position d'origine
+                // ils ne peuvent avancer que de
+                // deux cases depuis leur position d'origine
                 // L'autre comparaison verifie s'il y a une pièce entre la case
                 // actuelle et la case que le pion veut occupée.
             }
@@ -52,13 +60,24 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
         } else {
 
             if (compare == 2) {
+
+                setDouble_pas(false);
+
                 pos1.setSquare(pos.getX() - 1, pos.getY());
                 if (pos.getX() != 6 || e.getPiece(pos1) != NULL)
                     return false; // Les pions noirs commencent à la ligne 7,
                                   // alors ils ne peuvent avancer que de
-                // deux cases depuis leur position d'origine
+                                  // deux cases depuis leur position d'origine
                 // L'autre comparaison verifie s'il y a une pièce entre la case
                 // actuelle et la case que le pion veut occupée.
+
+                if (getPosition().getY() == position.getY() &&
+                    e.getPiece(position) == nullptr) {
+                    // Si le pion avance de deux cases et n'est pas en train de
+                    // prendre une pièce, il peut être pris en passant par un
+                    // pion adverse
+                    setDouble_pas(true);
+                }
             }
             return (pos.getX() > position.getX());
         }
@@ -75,37 +94,35 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
             return true;
     }
 
-    //Prise en passant
-    if(getCouleur() ==  Blanc && pos.getX() == 4){
+    // Prise en passant
+    if (getCouleur() == Blanc && pos.getX() == 4) {
 
-        if(position.getY() == pos.getY()-1  || position.getY() == pos.getY()+1)
-        {
-            
-        pos1.setSquare(position.getX()-1,position.getY());    
-        if(e.getPiece(pos1) != NULL)
-        if(e.getPiece(pos1)->getCouleur() != Blanc){
-            /*if(this->double_pas == true){
-                return true;
-            }*/
-        }
-        
+        if (position.getY() == pos.getY() - 1 ||
+            position.getY() == pos.getY() + 1) {
+
+            pos1.setSquare(position.getX() - 1, position.getY());
+            if (e.getPiece(pos1) != NULL)
+                if (e.getPiece(pos1)->getCouleur() != Blanc) {
+                    /*if(this->double_pas == true){
+                        return true;
+                    }*/
+                }
         }
 
-    }else if(getCouleur() == Noir && pos.getX() == 3){
-            if(position.getY() == pos.getY()-1  || position.getY() == pos.getY()+1)
-        {
-            
-        pos1.setSquare(position.getX()-1,position.getY());    
-        if(e.getPiece(pos1) != NULL)
-        if(e.getPiece(pos1)->getCouleur() != Noir){
-            /*if(this->double_pas == true){
-                return true;
-            }*/
-        }
-        
+    } else if (getCouleur() == Noir && pos.getX() == 3) {
+        if (position.getY() == pos.getY() - 1 ||
+            position.getY() == pos.getY() + 1) {
+
+            pos1.setSquare(position.getX() - 1, position.getY());
+            if (e.getPiece(pos1) != NULL)
+                if (e.getPiece(pos1)->getCouleur() != Noir) {
+                    /*if(this->double_pas == true){
+                        return true;
+                    }*/
+                }
         }
     }
-    //    
+    //
     return false;
 }
 
@@ -463,7 +480,6 @@ bool Dame::est_mouvement_legal(Echiquier &e, Square const &position) {
             return false; // mouvement illégal car la case est occupée par une
                           // pièce de même couleur
 
-    
     bool verifie_horizontal = mouvement_tour(e, position, *this);
     bool verifie_vertical = mouvement_fou(e, position, *this);
 
