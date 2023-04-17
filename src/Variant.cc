@@ -95,7 +95,6 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
     }
 
     // Prise en passant
-
     if (getCouleur() == Blanc && pos.getX() == 4) {
 
         if (position.getY() == pos.getY() - 1 ||
@@ -106,6 +105,7 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
                 if (e.getPiece(pos1)->getCouleur() != Blanc) {
                     if (dynamic_cast<Pion *>(e.getPiece(pos1))
                             ->getDouble_pas()) {
+
                         return true;
                     }
                 }
@@ -120,6 +120,7 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
                 if (e.getPiece(pos1)->getCouleur() != Noir) {
                     if (dynamic_cast<Pion *>(e.getPiece(pos1))
                             ->getDouble_pas()) {
+
                         return true;
                     }
                 }

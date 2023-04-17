@@ -19,7 +19,7 @@ class Pion : public Piece {
     Pion(Couleur couleur, string nom, Square position);
     Pion(Couleur couleur, Square position);
     Pion(Square position);
-    
+
     /*destructeur*/
     ~Pion();
 
@@ -37,12 +37,14 @@ class Pion : public Piece {
      */
     void setDouble_pas(bool status);
 
-     /**
-     * @brief vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces
-     * 
+    /**
+     * @brief vérifie si un mouvement est légal, cette méthode est commune à
+     * toutes les pièces
+     *
      * @param e echiquier à effectuer la vérification
      * @param destination position où l'on veut déplacer la pièce
-     * @return true si le mouvement est légal et false si le mouvement ne l'est pas 
+     * @return true si le mouvement est légal et false si le mouvement ne l'est
+     * pas
      */
     virtual bool est_mouvement_legal(Echiquier &e, Square const &position);
 };
@@ -58,7 +60,7 @@ class Tour : public Piece {
     Tour(Couleur couleur, string nom, Square position);
     Tour(Couleur couleur, Square position);
     Tour(Square position);
-    
+
     /*destructeur*/
     ~Tour();
 
@@ -71,13 +73,15 @@ class Tour : public Piece {
      * pas
      */
     bool mouvement_tour(Echiquier &e, Square const &position, Piece &p);
-     /**
-     * @brief vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces
-     * 
+    /**
+     * @brief vérifie si un mouvement est légal, cette méthode est commune à
+     * toutes les pièces
+     *
      * @param e echiquier à effectuer la vérification
      * @param destination position où l'on veut déplacer la pièce
      * @param p pièce que l'on veut vérifier le déplacement
-     * @return true si le mouvement est légal et false si le mouvement ne l'est pas 
+     * @return true si le mouvement est légal et false si le mouvement ne l'est
+     * pas
      */
     virtual bool est_mouvement_legal(Echiquier &e, Square const &position);
 };
@@ -89,22 +93,22 @@ class Tour : public Piece {
  */
 class Cavalier : public Piece {
   public:
-
     /*constructeurs*/
     Cavalier(Couleur couleur, string nom, Square position);
     Cavalier(Couleur Couleur, Square position);
     Cavalier(Square position);
-    
+
     /*destructeur*/
     ~Cavalier();
 
-
-     /**
-     * @brief vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces
-     * 
+    /**
+     * @brief vérifie si un mouvement est légal, cette méthode est commune à
+     * toutes les pièces
+     *
      * @param e echiquier à effectuer la vérification
      * @param destination position où l'on veut déplacer la pièce
-     * @return true si le mouvement est légal et false si le mouvement ne l'est pas 
+     * @return true si le mouvement est légal et false si le mouvement ne l'est
+     * pas
      */
     virtual bool est_mouvement_legal(Echiquier &e, Square const &position);
 };
@@ -120,7 +124,7 @@ class Fou : public Piece {
     Fou(Couleur couleur, string nom, Square position);
     Fou(Couleur couleur, Square position);
     Fou(Square position);
-    
+
     /*destructeur*/
     ~Fou();
 
@@ -134,12 +138,14 @@ class Fou : public Piece {
      * pas
      */
     bool mouvement_fou(Echiquier &e, Square const &position, Piece &p);
-     /**
-     * @brief vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces
-     * 
+    /**
+     * @brief vérifie si un mouvement est légal, cette méthode est commune à
+     * toutes les pièces
+     *
      * @param e echiquier à effectuer la vérification
      * @param destination position où l'on veut déplacer la pièce
-     * @return true si le mouvement est légal et false si le mouvement ne l'est pas 
+     * @return true si le mouvement est légal et false si le mouvement ne l'est
+     * pas
      */
     virtual bool est_mouvement_legal(Echiquier &e, Square const &position);
 };
@@ -155,7 +161,7 @@ class Dame : public Piece {
     Dame(Couleur couleur, string nom, Square position);
     Dame(Couleur couleur, Square position);
     Dame(Square position);
-    
+
     /*destructeur*/
     ~Dame();
 
@@ -182,12 +188,14 @@ class Dame : public Piece {
      * pas
      */
     bool mouvement_fou(Echiquier &e, Square const &position, Piece &p);
-     /**
-     * @brief vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces
-     * 
+    /**
+     * @brief vérifie si un mouvement est légal, cette méthode est commune à
+     * toutes les pièces
+     *
      * @param e echiquier à effectuer la vérification
      * @param destination position où l'on veut déplacer la pièce
-     * @return true si le mouvement est légal et false si le mouvement ne l'est pas 
+     * @return true si le mouvement est légal et false si le mouvement ne l'est
+     * pas
      */
     virtual bool est_mouvement_legal(Echiquier &e, Square const &position);
 };
@@ -199,21 +207,22 @@ class Dame : public Piece {
  */
 class Roi : public Piece {
   public:
-
     /*constructeurs*/
     Roi(Couleur couleur, string nom, Square position);
     Roi(Couleur couleur, Square position);
     Roi(Square position);
-    
+
     /*destructeur*/
     ~Roi();
 
-     /**
-     * @brief vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces
-     * 
+    /**
+     * @brief vérifie si un mouvement est légal, cette méthode est commune à
+     * toutes les pièces
+     *
      * @param e echiquier à effectuer la vérification
      * @param destination position où l'on veut déplacer la pièce
-     * @return true si le mouvement est légal et false si le mouvement ne l'est pas 
+     * @return true si le mouvement est légal et false si le mouvement ne l'est
+     * pas
      */
     virtual bool est_mouvement_legal(Echiquier &e, Square const &position);
 };
