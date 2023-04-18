@@ -15,7 +15,7 @@ OBJ := $(SRC:$(SRCDIR)/%.cc=$(OBJDIR)/%.o)
 
 $(TARGET): $(OBJ)
 	$(CC) -o $(TARGET) $^ $(CFLAGS)
-	mv $(TARGET) $(SRCDIR)/$(TARGET)
+	cp $(TARGET) $(SRCDIR)/$(TARGET)
 	@echo "Linking complete!"
 
 
@@ -36,4 +36,5 @@ clean:
 	rm -rf $(OBJDIR)/*.o
 	rm -rf $(OBJDIR)/*.gcda
 	rm -rf $(OBJDIR)/*.gcno
-	rm -f $(SRCDIR)/$(TARGET)
+	rm -rf $(TARGET)
+	rm -rf $(SRCDIR)/$(TARGET)

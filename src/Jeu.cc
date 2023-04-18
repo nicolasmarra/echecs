@@ -41,11 +41,13 @@ void Jeu::joue() {
             cin >> mouvement;
             if (mouvement != "/quit") {
                 if (saisie_correcte(mouvement) ||
-                    saisie_correcte_petitroque(mouvement) || saisie_correcte_grandroque(mouvement)) {
+                    saisie_correcte_petitroque(mouvement) ||
+                    saisie_correcte_grandroque(mouvement)) {
 
-                    if (saisie_correcte_petitroque(mouvement) || saisie_correcte_grandroque(mouvement)) {
+                    if (saisie_correcte_petitroque(mouvement) ||
+                        saisie_correcte_grandroque(mouvement)) {
 
-                        if (saisie_correcte_petitroque(mouvement))  {
+                        if (saisie_correcte_petitroque(mouvement)) {
                             if (e.executer_petitroque(Blanc) == true) {
                                 joueur = 2;
                                 e.affiche();
@@ -81,7 +83,7 @@ void Jeu::joue() {
 
                             position.conversion(dest);
                             if (p->est_mouvement_legal(e, position)) {
-                                 bool status = p->getDeplace();
+                                bool status = p->getDeplace();
                                 p->mouvement(e, position);
 
                                 if (e.detecter_echec(Blanc)) {
@@ -137,11 +139,13 @@ void Jeu::joue() {
             if (mouvement != "/quit") {
 
                 if (saisie_correcte(mouvement) ||
-                    saisie_correcte_petitroque(mouvement) || saisie_correcte_grandroque(mouvement)) {
+                    saisie_correcte_petitroque(mouvement) ||
+                    saisie_correcte_grandroque(mouvement)) {
 
-                    if (saisie_correcte_petitroque(mouvement) || saisie_correcte_grandroque(mouvement)) {
+                    if (saisie_correcte_petitroque(mouvement) ||
+                        saisie_correcte_grandroque(mouvement)) {
 
-                        if (saisie_correcte_petitroque(mouvement))  {
+                        if (saisie_correcte_petitroque(mouvement)) {
                             if (e.executer_petitroque(Noir) == true) {
                                 joueur = 1;
                                 e.affiche();
@@ -241,4 +245,5 @@ void Jeu::joue() {
     */
     cout << "Fin de la partie" << endl;
     cout << e.canonical_position();
+    cout << " ?-?";
 }

@@ -209,7 +209,6 @@ bool Echiquier::enlever_check(Square const &position, Couleur Couleur) {
         }
     }
 
-
     return false;
 }
 
