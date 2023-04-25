@@ -15,6 +15,9 @@ Pion::~Pion() {}
 
 bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
 
+    setDouble_pas(false);
+    setPrise_passant(false);
+
     if (e.getPiece(position) != NULL)
         if ((e.getPiece(position)->getCouleur()) == getCouleur())
             return false; // mouvement illégal car la case est occupée par une
@@ -37,7 +40,7 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
         if (getCouleur() == Blanc) {
             if (compare == 2) {
 
-                setDouble_pas(false);
+                // setDouble_pas(false);
 
                 pos1.setSquare(pos.getX() + 1, pos.getY());
                 if (pos.getX() != 1 || e.getPiece(pos1) != NULL)
@@ -61,7 +64,7 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
 
             if (compare == 2) {
 
-                setDouble_pas(false);
+                // setDouble_pas(false);
 
                 pos1.setSquare(pos.getX() - 1, pos.getY());
                 if (pos.getX() != 6 || e.getPiece(pos1) != NULL)
@@ -106,6 +109,7 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
                     if (dynamic_cast<Pion *>(e.getPiece(pos1))
                             ->getDouble_pas()) {
 
+                        setPrise_passant(true);
                         return true;
                     }
                 }
@@ -120,7 +124,7 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
                 if (e.getPiece(pos1)->getCouleur() != Noir) {
                     if (dynamic_cast<Pion *>(e.getPiece(pos1))
                             ->getDouble_pas()) {
-
+                        setPrise_passant(true);
                         return true;
                     }
                 }
@@ -133,6 +137,10 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
 void Pion::setDouble_pas(bool status) { this->double_pas = status; }
 
 bool Pion::getDouble_pas() { return this->double_pas; }
+
+void Pion::setPrise_passant(bool status) { this->prise_passant = status; }
+
+bool Pion::getPrise_passant() { return this->prise_passant; }
 
 Tour::Tour(Couleur couleur, string nom, Square position)
     : Piece(couleur, nom, position) {}

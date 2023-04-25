@@ -13,6 +13,7 @@ class Pion : public Piece {
     //--------atributs--------
   private:
     bool double_pas = false;
+    bool prise_passant = false;
 
   public:
     /*constructeurs*/
@@ -29,6 +30,20 @@ class Pion : public Piece {
      * @return true si la valeur de variable est true et false si c'est false
      */
     bool getDouble_pas();
+
+    /**
+     * @brief change la valeur de la variable prise_passant
+     *
+     * @param status nouvelle valeur de la variable prise_passant
+     */
+    void setPrise_passant(bool status);
+
+    /**
+     * @brief récupere la valeur de la variable prise_passant
+     *
+     * @return true si la valeur de variable est true et false si c'est false
+     */
+    bool getPrise_passant();
 
     /**
      * @brief change la valeur de la variable status
