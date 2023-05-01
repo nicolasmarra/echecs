@@ -28,6 +28,30 @@ bool saisie_correcte_grandroque(string const &cmd) {
     return regex_match(cmd, mouvmtpattern);
 }
 
+ResultatPartie Jeu::getResultat() const { return this->resultat; }
+
+void Jeu::setResultat(ResultatPartie resultat) { this->resultat = resultat; }
+
+string Jeu::afficherResultatPartie() {
+    string sortie;
+    switch (getResultat()) {
+    case VICTOIRE_BLANCS:
+        sortie = "1-0";
+        break;
+    case VICTOIRE_NOIRS:
+        sortie = "0-1";
+        break;
+    case NULLE:
+        sortie = "1/2-1/2";
+        break;
+    case PARTIE_INTERROMPUE:
+        sortie = "?-?";
+        break;
+    }
+
+    return sortie;
+}
+
 void Jeu::joue() {
     this->e.affiche();
     Piece *p;
@@ -39,7 +63,8 @@ void Jeu::joue() {
 
             cout << "Joueur 1(Blanc)" << endl << "Coup (eg. a1a8) ? ";
             cin >> mouvement;
-            if (mouvement != "/quit") {
+            if (mouvement != "/quit" && mouvement != "/draw" &&
+                mouvement != "/resign") {
                 if (saisie_correcte(mouvement) ||
                     saisie_correcte_petitroque(mouvement) ||
                     saisie_correcte_grandroque(mouvement)) {
@@ -114,6 +139,7 @@ void Jeu::joue() {
                             if (e.detecter_mat(Noir)) {
                                 cout << "Echec et mat!" << endl;
                                 cout << "Joueur 1(Blanc) a gagné" << endl;
+                                setResultat(VICTOIRE_BLANCS);
                                 finir(true);
                                 break;
                             }
@@ -127,6 +153,12 @@ void Jeu::joue() {
                 }
 
             } else {
+                if (mouvement == "/quit")
+                    setResultat(PARTIE_INTERROMPUE);
+                else if (mouvement == "/draw")
+                    setResultat(NULLE);
+                else if (mouvement == "/resign")
+                    setResultat(VICTOIRE_NOIRS);
                 finir(true);
                 break;
             }
@@ -136,7 +168,8 @@ void Jeu::joue() {
         while (joueur == 2) {
             cout << "Joueur 2(Noir)" << endl << "Coup (eg. a1a8) ? ";
             cin >> mouvement;
-            if (mouvement != "/quit") {
+            if (mouvement != "/quit" && mouvement != "/draw" &&
+                mouvement != "/resign") {
 
                 if (saisie_correcte(mouvement) ||
                     saisie_correcte_petitroque(mouvement) ||
@@ -209,6 +242,7 @@ void Jeu::joue() {
                             if (e.detecter_mat(Blanc)) {
                                 cout << "Echec et mat!" << endl;
                                 cout << "Joueur 2(Noir) a gagné" << endl;
+                                setResultat(VICTOIRE_NOIRS);
                                 finir(true);
                                 break;
                             }
@@ -222,6 +256,13 @@ void Jeu::joue() {
                     cout << "Saisie incorrecte!" << endl;
                 }
             } else {
+                if (mouvement == "/quit")
+                    setResultat(PARTIE_INTERROMPUE);
+                else if (mouvement == "/draw")
+                    setResultat(NULLE);
+                else if (mouvement == "/resign")
+                    setResultat(VICTOIRE_BLANCS);
+
                 finir(true);
                 break;
             }
@@ -245,5 +286,5 @@ void Jeu::joue() {
     */
     cout << "Fin de la partie" << endl;
     cout << e.canonical_position();
-    cout << " ?-?";
+    cout << afficherResultatPartie();
 }

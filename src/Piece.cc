@@ -33,6 +33,7 @@ void Piece::mouvement(Echiquier &e, Square const &position) {
     */
 
     // double pas
+
     if (e.getPiece(position) != NULL) {
 
         if ((e.getPiece(position)->to_string() == "\u2659" ||
@@ -43,6 +44,8 @@ void Piece::mouvement(Echiquier &e, Square const &position) {
             // ce n'est pas un double pas
         }
     }
+
+    // pion
 
     e.pose_piece(this, position);
     e.pose_piece(NULL, getPosition());
