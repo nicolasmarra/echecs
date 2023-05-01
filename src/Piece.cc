@@ -76,6 +76,10 @@ void Piece::promotion(Echiquier &e, Square const &pos) {
                      << endl;
                 cin >> c;
 
+                if (c == '/' && cin.peek() == 'q') {
+                    fin = 0;
+                    break;
+                }
                 switch (c) {
                 case 'Q':
 
@@ -121,6 +125,10 @@ void Piece::promotion(Echiquier &e, Square const &pos) {
                      << endl;
                 cin >> c;
 
+                if (c == '/' && cin.peek() == 'q') {
+                    fin = 0;
+                    break;
+                }
                 switch (c) {
                 case 'Q':
 

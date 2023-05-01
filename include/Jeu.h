@@ -101,7 +101,7 @@ class Jeu {
      *
      * @return Resultat de la partie
      */
-    string afficherResultatPartie();
+    string afficherResultatPartie() const;
 };
 
 #endif

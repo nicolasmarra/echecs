@@ -32,7 +32,7 @@ ResultatPartie Jeu::getResultat() const { return this->resultat; }
 
 void Jeu::setResultat(ResultatPartie resultat) { this->resultat = resultat; }
 
-string Jeu::afficherResultatPartie() {
+string Jeu::afficherResultatPartie() const {
     string sortie;
     switch (getResultat()) {
     case VICTOIRE_BLANCS:
@@ -45,6 +45,9 @@ string Jeu::afficherResultatPartie() {
         sortie = "1/2-1/2";
         break;
     case PARTIE_INTERROMPUE:
+        sortie = "?-?";
+        break;
+    default:
         sortie = "?-?";
         break;
     }
@@ -285,6 +288,5 @@ void Jeu::joue() {
         }
     */
     cout << "Fin de la partie" << endl;
-    cout << e.canonical_position();
-    cout << afficherResultatPartie();
+    cout << e.canonical_position() << " " << afficherResultatPartie() << endl;
 }
