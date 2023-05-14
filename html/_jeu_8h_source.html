@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Mini-Projet Echiquier (Programmation Objet - C++):  Fichier source de include/Jeu.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Mini-Projet Echiquier (Programmation Objet - C++)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Jeu.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_jeu_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _JEU_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _JEU_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_echiquier_8h.html">Echiquier.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;regex&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeea">   10</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeea">ResultatPartie</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeeaad880534c7fed8f7aba3412693299db68">   11</a></span>&#160;    <a class="code" href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeeaad880534c7fed8f7aba3412693299db68">VICTOIRE_BLANCS</a>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeeaa6b6cee65f9772314ff41fd1189adcd54">   12</a></span>&#160;    <a class="code" href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeeaa6b6cee65f9772314ff41fd1189adcd54">VICTOIRE_NOIRS</a>,</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeeaa304c8c25d3cf28c1bdc197697fd152c6">   13</a></span>&#160;    <a class="code" href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeeaa304c8c25d3cf28c1bdc197697fd152c6">NULLE</a>,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeeaaa97895e453d0babee992e6191e8382e6">PARTIE_INTERROMPUE</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeeaaa97895e453d0babee992e6191e8382e6">   15</a></span>&#160;};</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_jeu.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_jeu.html">Jeu</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//--------atributs--------</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> fin_partie;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_echiquier.html">Echiquier</a> e;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> equipe;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeea">ResultatPartie</a> resultat;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">/*constructeur*/</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_jeu.html#acc5795ee00edf75516d3dfe65be3e6d6">Jeu</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">/*destructeur*/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_jeu.html#a9cd19e73df169d7f09397be61ba8548c">~Jeu</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_jeu.html#a7931f8054847abc19e33e73967a3807e">affiche</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_jeu.html#a75f52af24e54045c1dac440b6e9cd640">joue</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_jeu.html#a5dde4eaa2f183ae7fef46e4366db062e">fin</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_jeu.html#a6ceb1e06c2b5a11913808ca1a578f194">finir</a>(<span class="keywordtype">bool</span> status);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_jeu.html#a81ec468a5a1498dac07cf0a6e6c09c76">saisie_correcte</a>(<span class="keywordtype">string</span> <span class="keyword">const</span> &amp;cmd);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_jeu.html#a5c22a435d72e63589785ea15dea28de5">saisie_correcte_petitroque</a>(<span class="keywordtype">string</span> <span class="keyword">const</span> &amp;cmd);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeea">ResultatPartie</a> <a class="code" href="class_jeu.html#a9a079e12ba95bc65091112f5414caa14">getResultat</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_jeu.html#af31a61c5f701e8d2069a74598ed3b040">setResultat</a>(<a class="code" href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeea">ResultatPartie</a> resultat);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_jeu.html#af7d0e01983c63084863c1fae1df17d48">afficherResultatPartie</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_echiquier_8h_html"><div class="ttname"><a href="_echiquier_8h.html">Echiquier.h</a></div></div>
+<div class="ttc" id="a_jeu_8h_html_a9e3f1d7c9b78396c86fb859c520eeeea"><div class="ttname"><a href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeea">ResultatPartie</a></div><div class="ttdeci">ResultatPartie</div><div class="ttdoc">ensemble répresentant les résultats possibles d'une partie</div><div class="ttdef"><b>Definition:</b> Jeu.h:10</div></div>
+<div class="ttc" id="a_jeu_8h_html_a9e3f1d7c9b78396c86fb859c520eeeeaa304c8c25d3cf28c1bdc197697fd152c6"><div class="ttname"><a href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeeaa304c8c25d3cf28c1bdc197697fd152c6">NULLE</a></div><div class="ttdeci">@ NULLE</div><div class="ttdef"><b>Definition:</b> Jeu.h:13</div></div>
+<div class="ttc" id="a_jeu_8h_html_a9e3f1d7c9b78396c86fb859c520eeeeaa6b6cee65f9772314ff41fd1189adcd54"><div class="ttname"><a href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeeaa6b6cee65f9772314ff41fd1189adcd54">VICTOIRE_NOIRS</a></div><div class="ttdeci">@ VICTOIRE_NOIRS</div><div class="ttdef"><b>Definition:</b> Jeu.h:12</div></div>
+<div class="ttc" id="a_jeu_8h_html_a9e3f1d7c9b78396c86fb859c520eeeeaaa97895e453d0babee992e6191e8382e6"><div class="ttname"><a href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeeaaa97895e453d0babee992e6191e8382e6">PARTIE_INTERROMPUE</a></div><div class="ttdeci">@ PARTIE_INTERROMPUE</div><div class="ttdef"><b>Definition:</b> Jeu.h:14</div></div>
+<div class="ttc" id="a_jeu_8h_html_a9e3f1d7c9b78396c86fb859c520eeeeaad880534c7fed8f7aba3412693299db68"><div class="ttname"><a href="_jeu_8h.html#a9e3f1d7c9b78396c86fb859c520eeeeaad880534c7fed8f7aba3412693299db68">VICTOIRE_BLANCS</a></div><div class="ttdeci">@ VICTOIRE_BLANCS</div><div class="ttdef"><b>Definition:</b> Jeu.h:11</div></div>
+<div class="ttc" id="a_piece_8h_html_aa304d0ca681f782b1d7735da33037dd7"><div class="ttname"><a href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a></div><div class="ttdeci">Couleur</div><div class="ttdoc">ensemble statique répresentant les couleurs des pièces</div><div class="ttdef"><b>Definition:</b> Piece.h:15</div></div>
+<div class="ttc" id="aclass_echiquier_html"><div class="ttname"><a href="class_echiquier.html">Echiquier</a></div><div class="ttdoc">Représente le stockage des pièces crées.</div><div class="ttdef"><b>Definition:</b> Echiquier.h:12</div></div>
+<div class="ttc" id="aclass_jeu_html"><div class="ttname"><a href="class_jeu.html">Jeu</a></div><div class="ttdoc">Cette classe possède un objet de classe Echiquier et assure la gestion d'un coup.</div><div class="ttdef"><b>Definition:</b> Jeu.h:22</div></div>
+<div class="ttc" id="aclass_jeu_html_a5c22a435d72e63589785ea15dea28de5"><div class="ttname"><a href="class_jeu.html#a5c22a435d72e63589785ea15dea28de5">Jeu::saisie_correcte_petitroque</a></div><div class="ttdeci">bool saisie_correcte_petitroque(string const &amp;cmd)</div><div class="ttdoc">vérifie la validité d'une commande pour faire le mouvement roque</div><div class="ttdef"><b>Definition:</b> Jeu.cc:21</div></div>
+<div class="ttc" id="aclass_jeu_html_a5dde4eaa2f183ae7fef46e4366db062e"><div class="ttname"><a href="class_jeu.html#a5dde4eaa2f183ae7fef46e4366db062e">Jeu::fin</a></div><div class="ttdeci">bool fin()</div><div class="ttdoc">retourne la valeur de la variable fin_partie, c'est en fait une fonction get</div><div class="ttdef"><b>Definition:</b> Jeu.cc:10</div></div>
+<div class="ttc" id="aclass_jeu_html_a6ceb1e06c2b5a11913808ca1a578f194"><div class="ttname"><a href="class_jeu.html#a6ceb1e06c2b5a11913808ca1a578f194">Jeu::finir</a></div><div class="ttdeci">void finir(bool status)</div><div class="ttdoc">change la valeur de la variable fin_partie</div><div class="ttdef"><b>Definition:</b> Jeu.cc:12</div></div>
+<div class="ttc" id="aclass_jeu_html_a75f52af24e54045c1dac440b6e9cd640"><div class="ttname"><a href="class_jeu.html#a75f52af24e54045c1dac440b6e9cd640">Jeu::joue</a></div><div class="ttdeci">void joue()</div><div class="ttdoc">permet de lancer le jeu</div><div class="ttdef"><b>Definition:</b> Jeu.cc:58</div></div>
+<div class="ttc" id="aclass_jeu_html_a7931f8054847abc19e33e73967a3807e"><div class="ttname"><a href="class_jeu.html#a7931f8054847abc19e33e73967a3807e">Jeu::affiche</a></div><div class="ttdeci">void affiche()</div><div class="ttdoc">affiche l'échiquier pour que l'utilisateur se rende compte de la nouvelle position</div><div class="ttdef"><b>Definition:</b> Jeu.cc:14</div></div>
+<div class="ttc" id="aclass_jeu_html_a81ec468a5a1498dac07cf0a6e6c09c76"><div class="ttname"><a href="class_jeu.html#a81ec468a5a1498dac07cf0a6e6c09c76">Jeu::saisie_correcte</a></div><div class="ttdeci">bool saisie_correcte(string const &amp;cmd)</div><div class="ttdoc">vérifie la validité d'une commande</div><div class="ttdef"><b>Definition:</b> Jeu.cc:16</div></div>
+<div class="ttc" id="aclass_jeu_html_a9a079e12ba95bc65091112f5414caa14"><div class="ttname"><a href="class_jeu.html#a9a079e12ba95bc65091112f5414caa14">Jeu::getResultat</a></div><div class="ttdeci">ResultatPartie getResultat() const</div><div class="ttdoc">récupere le résultat de la partie</div><div class="ttdef"><b>Definition:</b> Jeu.cc:31</div></div>
+<div class="ttc" id="aclass_jeu_html_a9cd19e73df169d7f09397be61ba8548c"><div class="ttname"><a href="class_jeu.html#a9cd19e73df169d7f09397be61ba8548c">Jeu::~Jeu</a></div><div class="ttdeci">~Jeu()</div><div class="ttdef"><b>Definition:</b> Jeu.cc:8</div></div>
+<div class="ttc" id="aclass_jeu_html_acc5795ee00edf75516d3dfe65be3e6d6"><div class="ttname"><a href="class_jeu.html#acc5795ee00edf75516d3dfe65be3e6d6">Jeu::Jeu</a></div><div class="ttdeci">Jeu()</div><div class="ttdef"><b>Definition:</b> Jeu.cc:3</div></div>
+<div class="ttc" id="aclass_jeu_html_af31a61c5f701e8d2069a74598ed3b040"><div class="ttname"><a href="class_jeu.html#af31a61c5f701e8d2069a74598ed3b040">Jeu::setResultat</a></div><div class="ttdeci">void setResultat(ResultatPartie resultat)</div><div class="ttdoc">affecte un résultat à la partie</div><div class="ttdef"><b>Definition:</b> Jeu.cc:33</div></div>
+<div class="ttc" id="aclass_jeu_html_af7d0e01983c63084863c1fae1df17d48"><div class="ttname"><a href="class_jeu.html#af7d0e01983c63084863c1fae1df17d48">Jeu::afficherResultatPartie</a></div><div class="ttdeci">string afficherResultatPartie() const</div><div class="ttdoc">affiche le résultat de la partie</div><div class="ttdef"><b>Definition:</b> Jeu.cc:35</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

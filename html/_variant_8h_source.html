@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Mini-Projet Echiquier (Programmation Objet - C++):  Fichier source de include/Variant.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Mini-Projet Echiquier (Programmation Objet - C++)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Variant.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_variant_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _VARIANT_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _VARIANT_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_piece_8h.html">Piece.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_pion.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pion.html">Pion</a> : <span class="keyword">public</span> <a class="code" href="class_piece.html">Piece</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">//--------atributs--------</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">bool</span> double_pas = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">bool</span> prise_passant = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">/*constructeurs*/</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_pion.html#aeb2882d7dcc4d16f6643d5b7c4e8cc6a">Pion</a>(<a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> couleur, <span class="keywordtype">string</span> nom, <a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_pion.html#aeb2882d7dcc4d16f6643d5b7c4e8cc6a">Pion</a>(<a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> couleur, <a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_pion.html#aeb2882d7dcc4d16f6643d5b7c4e8cc6a">Pion</a>(<a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">/*destructeur*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_pion.html#a94f2fa0a967d781c32c16a32b439e298">~Pion</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_pion.html#a44414a37ccb37fdebcb4b5f391f42c85">getDouble_pas</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pion.html#a5a86408658fd40ef1caa865c953465b3">setPrise_passant</a>(<span class="keywordtype">bool</span> status);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_pion.html#a5ce308ba0e48cab20b7bb165cfbfdbf0">getPrise_passant</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pion.html#aa8cc2d8aaa54755a5019ed6fc73d0dc7">setDouble_pas</a>(<span class="keywordtype">bool</span> status);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_pion.html#a08e168fa80c397a8af6a25e962d69834">est_mouvement_legal</a>(<a class="code" href="class_echiquier.html">Echiquier</a> &amp;e, <a class="code" href="class_square.html">Square</a> <span class="keyword">const</span> &amp;position);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_tour.html">   72</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_tour.html">Tour</a> : <span class="keyword">public</span> <a class="code" href="class_piece.html">Piece</a> {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">/*constructeurs*/</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="class_tour.html#a4749608c38ad87961713fc097014e9f1">Tour</a>(<a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> couleur, <span class="keywordtype">string</span> nom, <a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="class_tour.html#a4749608c38ad87961713fc097014e9f1">Tour</a>(<a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> couleur, <a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="class_tour.html#a4749608c38ad87961713fc097014e9f1">Tour</a>(<a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">/*destructeur*/</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="class_tour.html#a6d692d4b1a687bf34f6b38828d86512e">~Tour</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_tour.html#a035ad0390950058a9312cde7c8ee57f0">mouvement_tour</a>(<a class="code" href="class_echiquier.html">Echiquier</a> &amp;e, <a class="code" href="class_square.html">Square</a> <span class="keyword">const</span> &amp;position, <a class="code" href="class_piece.html">Piece</a> &amp;p);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_tour.html#a7fb7fb3336c3541853ee0f039331ff54">est_mouvement_legal</a>(<a class="code" href="class_echiquier.html">Echiquier</a> &amp;e, <a class="code" href="class_square.html">Square</a> <span class="keyword">const</span> &amp;position);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_cavalier.html">  109</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cavalier.html">Cavalier</a> : <span class="keyword">public</span> <a class="code" href="class_piece.html">Piece</a> {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">/*constructeurs*/</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="class_cavalier.html#a0352af28d28920f300d4aef59ddf8b75">Cavalier</a>(<a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> couleur, <span class="keywordtype">string</span> nom, <a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="class_cavalier.html#a0352af28d28920f300d4aef59ddf8b75">Cavalier</a>(<a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> <a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a>, <a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="class_cavalier.html#a0352af28d28920f300d4aef59ddf8b75">Cavalier</a>(<a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">/*destructeur*/</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="class_cavalier.html#a8c7b5b91346b5f5a8266ea8478de5653">~Cavalier</a>();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_cavalier.html#a1b306fff4bf785fbd87942effe3ebb6d">est_mouvement_legal</a>(<a class="code" href="class_echiquier.html">Echiquier</a> &amp;e, <a class="code" href="class_square.html">Square</a> <span class="keyword">const</span> &amp;position);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="class_fou.html">  136</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_fou.html">Fou</a> : <span class="keyword">public</span> <a class="code" href="class_piece.html">Piece</a> {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">/*constructeurs*/</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="class_fou.html#ade214e71e13fd5686f2f0bd5584ad0d3">Fou</a>(<a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> couleur, <span class="keywordtype">string</span> nom, <a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="class_fou.html#ade214e71e13fd5686f2f0bd5584ad0d3">Fou</a>(<a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> couleur, <a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="class_fou.html#ade214e71e13fd5686f2f0bd5584ad0d3">Fou</a>(<a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">/*destructeur*/</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="class_fou.html#a32a5a66046e251b6c1fd1cbb9fa059f2">~Fou</a>();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_fou.html#a9c5f17bed52ffa414384d883e03cef85">mouvement_fou</a>(<a class="code" href="class_echiquier.html">Echiquier</a> &amp;e, <a class="code" href="class_square.html">Square</a> <span class="keyword">const</span> &amp;position, <a class="code" href="class_piece.html">Piece</a> &amp;p);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_fou.html#a1ddb84f9c151d590867b98c1e40c7ce2">est_mouvement_legal</a>(<a class="code" href="class_echiquier.html">Echiquier</a> &amp;e, <a class="code" href="class_square.html">Square</a> <span class="keyword">const</span> &amp;position);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;};</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="class_dame.html">  173</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_dame.html">Dame</a> : <span class="keyword">public</span> <a class="code" href="class_piece.html">Piece</a> {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">/*constructeurs*/</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="class_dame.html#a167c4d82899e5d001bbb60fc5127cecf">Dame</a>(<a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> couleur, <span class="keywordtype">string</span> nom, <a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="class_dame.html#a167c4d82899e5d001bbb60fc5127cecf">Dame</a>(<a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> couleur, <a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="class_dame.html#a167c4d82899e5d001bbb60fc5127cecf">Dame</a>(<a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="comment">/*destructeur*/</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="class_dame.html#a0703dd0baae4638cf0fc4df7facec965">~Dame</a>();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="comment">// Changer ça</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_dame.html#a5448e6f9a7032275a30064de50b60c0b">mouvement_tour</a>(<a class="code" href="class_echiquier.html">Echiquier</a> &amp;e, <a class="code" href="class_square.html">Square</a> <span class="keyword">const</span> &amp;position, <a class="code" href="class_piece.html">Piece</a> &amp;p);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_dame.html#a76fc22316e649b5ca972fb81a91657f4">mouvement_fou</a>(<a class="code" href="class_echiquier.html">Echiquier</a> &amp;e, <a class="code" href="class_square.html">Square</a> <span class="keyword">const</span> &amp;position, <a class="code" href="class_piece.html">Piece</a> &amp;p);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_dame.html#a2b0811bde7f2c6b49571f1af06f9381e">est_mouvement_legal</a>(<a class="code" href="class_echiquier.html">Echiquier</a> &amp;e, <a class="code" href="class_square.html">Square</a> <span class="keyword">const</span> &amp;position);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;};</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="class_roi.html">  223</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_roi.html">Roi</a> : <span class="keyword">public</span> <a class="code" href="class_piece.html">Piece</a> {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="comment">/*constructeurs*/</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="class_roi.html#a59472d2bbccfd805e398a7bff2a81738">Roi</a>(<a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> couleur, <span class="keywordtype">string</span> nom, <a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="class_roi.html#a59472d2bbccfd805e398a7bff2a81738">Roi</a>(<a class="code" href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a> couleur, <a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <a class="code" href="class_roi.html#a59472d2bbccfd805e398a7bff2a81738">Roi</a>(<a class="code" href="class_square.html">Square</a> position);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="comment">/*destructeur*/</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="class_roi.html#a4221a49b57d975b30a891c79f9376eec">~Roi</a>();</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_roi.html#a2a6f5cc4996f505cae604e925584d09b">est_mouvement_legal</a>(<a class="code" href="class_echiquier.html">Echiquier</a> &amp;e, <a class="code" href="class_square.html">Square</a> <span class="keyword">const</span> &amp;position);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;};</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_piece_8h_html"><div class="ttname"><a href="_piece_8h.html">Piece.h</a></div></div>
+<div class="ttc" id="a_piece_8h_html_aa304d0ca681f782b1d7735da33037dd7"><div class="ttname"><a href="_piece_8h.html#aa304d0ca681f782b1d7735da33037dd7">Couleur</a></div><div class="ttdeci">Couleur</div><div class="ttdoc">ensemble statique répresentant les couleurs des pièces</div><div class="ttdef"><b>Definition:</b> Piece.h:15</div></div>
+<div class="ttc" id="aclass_cavalier_html"><div class="ttname"><a href="class_cavalier.html">Cavalier</a></div><div class="ttdoc">classe concrète répresentant les Cavaliers de l'échiquer, cette classe hérite de la classe pièce</div><div class="ttdef"><b>Definition:</b> Variant.h:109</div></div>
+<div class="ttc" id="aclass_cavalier_html_a0352af28d28920f300d4aef59ddf8b75"><div class="ttname"><a href="class_cavalier.html#a0352af28d28920f300d4aef59ddf8b75">Cavalier::Cavalier</a></div><div class="ttdeci">Cavalier(Couleur couleur, string nom, Square position)</div><div class="ttdef"><b>Definition:</b> Variant.cc:252</div></div>
+<div class="ttc" id="aclass_cavalier_html_a1b306fff4bf785fbd87942effe3ebb6d"><div class="ttname"><a href="class_cavalier.html#a1b306fff4bf785fbd87942effe3ebb6d">Cavalier::est_mouvement_legal</a></div><div class="ttdeci">virtual bool est_mouvement_legal(Echiquier &amp;e, Square const &amp;position)</div><div class="ttdoc">vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces</div><div class="ttdef"><b>Definition:</b> Variant.cc:262</div></div>
+<div class="ttc" id="aclass_cavalier_html_a8c7b5b91346b5f5a8266ea8478de5653"><div class="ttname"><a href="class_cavalier.html#a8c7b5b91346b5f5a8266ea8478de5653">Cavalier::~Cavalier</a></div><div class="ttdeci">~Cavalier()</div><div class="ttdef"><b>Definition:</b> Variant.cc:260</div></div>
+<div class="ttc" id="aclass_dame_html"><div class="ttname"><a href="class_dame.html">Dame</a></div><div class="ttdoc">classe concrète répresentant la Dame de l'échiquer, cette classe hérite de la classe pièce</div><div class="ttdef"><b>Definition:</b> Variant.h:173</div></div>
+<div class="ttc" id="aclass_dame_html_a0703dd0baae4638cf0fc4df7facec965"><div class="ttname"><a href="class_dame.html#a0703dd0baae4638cf0fc4df7facec965">Dame::~Dame</a></div><div class="ttdeci">~Dame()</div><div class="ttdef"><b>Definition:</b> Variant.cc:381</div></div>
+<div class="ttc" id="aclass_dame_html_a167c4d82899e5d001bbb60fc5127cecf"><div class="ttname"><a href="class_dame.html#a167c4d82899e5d001bbb60fc5127cecf">Dame::Dame</a></div><div class="ttdeci">Dame(Couleur couleur, string nom, Square position)</div><div class="ttdef"><b>Definition:</b> Variant.cc:373</div></div>
+<div class="ttc" id="aclass_dame_html_a2b0811bde7f2c6b49571f1af06f9381e"><div class="ttname"><a href="class_dame.html#a2b0811bde7f2c6b49571f1af06f9381e">Dame::est_mouvement_legal</a></div><div class="ttdeci">virtual bool est_mouvement_legal(Echiquier &amp;e, Square const &amp;position)</div><div class="ttdoc">vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces</div><div class="ttdef"><b>Definition:</b> Variant.cc:522</div></div>
+<div class="ttc" id="aclass_dame_html_a5448e6f9a7032275a30064de50b60c0b"><div class="ttname"><a href="class_dame.html#a5448e6f9a7032275a30064de50b60c0b">Dame::mouvement_tour</a></div><div class="ttdeci">bool mouvement_tour(Echiquier &amp;e, Square const &amp;position, Piece &amp;p)</div><div class="ttdoc">vérifie si le mouvement de la tour est legal</div><div class="ttdef"><b>Definition:</b> Variant.cc:383</div></div>
+<div class="ttc" id="aclass_dame_html_a76fc22316e649b5ca972fb81a91657f4"><div class="ttname"><a href="class_dame.html#a76fc22316e649b5ca972fb81a91657f4">Dame::mouvement_fou</a></div><div class="ttdeci">bool mouvement_fou(Echiquier &amp;e, Square const &amp;position, Piece &amp;p)</div><div class="ttdoc">vérifie si le mouvement du fou est legal</div><div class="ttdef"><b>Definition:</b> Variant.cc:443</div></div>
+<div class="ttc" id="aclass_echiquier_html"><div class="ttname"><a href="class_echiquier.html">Echiquier</a></div><div class="ttdoc">Représente le stockage des pièces crées.</div><div class="ttdef"><b>Definition:</b> Echiquier.h:12</div></div>
+<div class="ttc" id="aclass_fou_html"><div class="ttname"><a href="class_fou.html">Fou</a></div><div class="ttdoc">classe concrète répresentant les Fous de l'échiquer, cette classe hérite de la classe pièce</div><div class="ttdef"><b>Definition:</b> Variant.h:136</div></div>
+<div class="ttc" id="aclass_fou_html_a1ddb84f9c151d590867b98c1e40c7ce2"><div class="ttname"><a href="class_fou.html#a1ddb84f9c151d590867b98c1e40c7ce2">Fou::est_mouvement_legal</a></div><div class="ttdeci">virtual bool est_mouvement_legal(Echiquier &amp;e, Square const &amp;position)</div><div class="ttdoc">vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces</div><div class="ttdef"><b>Definition:</b> Variant.cc:369</div></div>
+<div class="ttc" id="aclass_fou_html_a32a5a66046e251b6c1fd1cbb9fa059f2"><div class="ttname"><a href="class_fou.html#a32a5a66046e251b6c1fd1cbb9fa059f2">Fou::~Fou</a></div><div class="ttdeci">~Fou()</div><div class="ttdef"><b>Definition:</b> Variant.cc:288</div></div>
+<div class="ttc" id="aclass_fou_html_a9c5f17bed52ffa414384d883e03cef85"><div class="ttname"><a href="class_fou.html#a9c5f17bed52ffa414384d883e03cef85">Fou::mouvement_fou</a></div><div class="ttdeci">bool mouvement_fou(Echiquier &amp;e, Square const &amp;position, Piece &amp;p)</div><div class="ttdoc">vérifie si le mouvement du fou est legal</div><div class="ttdef"><b>Definition:</b> Variant.cc:290</div></div>
+<div class="ttc" id="aclass_fou_html_ade214e71e13fd5686f2f0bd5584ad0d3"><div class="ttname"><a href="class_fou.html#ade214e71e13fd5686f2f0bd5584ad0d3">Fou::Fou</a></div><div class="ttdeci">Fou(Couleur couleur, string nom, Square position)</div><div class="ttdef"><b>Definition:</b> Variant.cc:280</div></div>
+<div class="ttc" id="aclass_piece_html"><div class="ttname"><a href="class_piece.html">Piece</a></div><div class="ttdoc">Classe abstraite répresentant les pièces de l'échiquier.</div><div class="ttdef"><b>Definition:</b> Piece.h:21</div></div>
+<div class="ttc" id="aclass_pion_html"><div class="ttname"><a href="class_pion.html">Pion</a></div><div class="ttdoc">classe concrète répresentant les Pions de l'échiquer, cette classe hérite de la classe pièce</div><div class="ttdef"><b>Definition:</b> Variant.h:12</div></div>
+<div class="ttc" id="aclass_pion_html_a08e168fa80c397a8af6a25e962d69834"><div class="ttname"><a href="class_pion.html#a08e168fa80c397a8af6a25e962d69834">Pion::est_mouvement_legal</a></div><div class="ttdeci">virtual bool est_mouvement_legal(Echiquier &amp;e, Square const &amp;position)</div><div class="ttdoc">vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces</div><div class="ttdef"><b>Definition:</b> Variant.cc:16</div></div>
+<div class="ttc" id="aclass_pion_html_a44414a37ccb37fdebcb4b5f391f42c85"><div class="ttname"><a href="class_pion.html#a44414a37ccb37fdebcb4b5f391f42c85">Pion::getDouble_pas</a></div><div class="ttdeci">bool getDouble_pas()</div><div class="ttdoc">récupere la valeur de la variable double_pas</div><div class="ttdef"><b>Definition:</b> Variant.cc:172</div></div>
+<div class="ttc" id="aclass_pion_html_a5a86408658fd40ef1caa865c953465b3"><div class="ttname"><a href="class_pion.html#a5a86408658fd40ef1caa865c953465b3">Pion::setPrise_passant</a></div><div class="ttdeci">void setPrise_passant(bool status)</div><div class="ttdoc">change la valeur de la variable prise_passant</div><div class="ttdef"><b>Definition:</b> Variant.cc:174</div></div>
+<div class="ttc" id="aclass_pion_html_a5ce308ba0e48cab20b7bb165cfbfdbf0"><div class="ttname"><a href="class_pion.html#a5ce308ba0e48cab20b7bb165cfbfdbf0">Pion::getPrise_passant</a></div><div class="ttdeci">bool getPrise_passant()</div><div class="ttdoc">récupere la valeur de la variable prise_passant</div><div class="ttdef"><b>Definition:</b> Variant.cc:176</div></div>
+<div class="ttc" id="aclass_pion_html_a94f2fa0a967d781c32c16a32b439e298"><div class="ttname"><a href="class_pion.html#a94f2fa0a967d781c32c16a32b439e298">Pion::~Pion</a></div><div class="ttdeci">~Pion()</div><div class="ttdef"><b>Definition:</b> Variant.cc:14</div></div>
+<div class="ttc" id="aclass_pion_html_aa8cc2d8aaa54755a5019ed6fc73d0dc7"><div class="ttname"><a href="class_pion.html#aa8cc2d8aaa54755a5019ed6fc73d0dc7">Pion::setDouble_pas</a></div><div class="ttdeci">void setDouble_pas(bool status)</div><div class="ttdoc">change la valeur de la variable status</div><div class="ttdef"><b>Definition:</b> Variant.cc:170</div></div>
+<div class="ttc" id="aclass_pion_html_aeb2882d7dcc4d16f6643d5b7c4e8cc6a"><div class="ttname"><a href="class_pion.html#aeb2882d7dcc4d16f6643d5b7c4e8cc6a">Pion::Pion</a></div><div class="ttdeci">Pion(Couleur couleur, string nom, Square position)</div><div class="ttdef"><b>Definition:</b> Variant.cc:6</div></div>
+<div class="ttc" id="aclass_roi_html"><div class="ttname"><a href="class_roi.html">Roi</a></div><div class="ttdoc">classe concrète répresentant le Roi de l'échiquer, cette classe hérite de la classe pièce</div><div class="ttdef"><b>Definition:</b> Variant.h:223</div></div>
+<div class="ttc" id="aclass_roi_html_a2a6f5cc4996f505cae604e925584d09b"><div class="ttname"><a href="class_roi.html#a2a6f5cc4996f505cae604e925584d09b">Roi::est_mouvement_legal</a></div><div class="ttdeci">virtual bool est_mouvement_legal(Echiquier &amp;e, Square const &amp;position)</div><div class="ttdoc">vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces</div><div class="ttdef"><b>Definition:</b> Variant.cc:549</div></div>
+<div class="ttc" id="aclass_roi_html_a4221a49b57d975b30a891c79f9376eec"><div class="ttname"><a href="class_roi.html#a4221a49b57d975b30a891c79f9376eec">Roi::~Roi</a></div><div class="ttdeci">~Roi()</div><div class="ttdef"><b>Definition:</b> Variant.cc:547</div></div>
+<div class="ttc" id="aclass_roi_html_a59472d2bbccfd805e398a7bff2a81738"><div class="ttname"><a href="class_roi.html#a59472d2bbccfd805e398a7bff2a81738">Roi::Roi</a></div><div class="ttdeci">Roi(Couleur couleur, string nom, Square position)</div><div class="ttdef"><b>Definition:</b> Variant.cc:539</div></div>
+<div class="ttc" id="aclass_square_html"><div class="ttname"><a href="class_square.html">Square</a></div><div class="ttdoc">Représente case une de l'échiquier.</div><div class="ttdef"><b>Definition:</b> Square.h:12</div></div>
+<div class="ttc" id="aclass_tour_html"><div class="ttname"><a href="class_tour.html">Tour</a></div><div class="ttdoc">classe concrète répresentant les Tours de l'échiquer, cette classe hérite de la classe pièce</div><div class="ttdef"><b>Definition:</b> Variant.h:72</div></div>
+<div class="ttc" id="aclass_tour_html_a035ad0390950058a9312cde7c8ee57f0"><div class="ttname"><a href="class_tour.html#a035ad0390950058a9312cde7c8ee57f0">Tour::mouvement_tour</a></div><div class="ttdeci">bool mouvement_tour(Echiquier &amp;e, Square const &amp;position, Piece &amp;p)</div><div class="ttdoc">vérifie si le mouvement de la tour est legal</div><div class="ttdef"><b>Definition:</b> Variant.cc:188</div></div>
+<div class="ttc" id="aclass_tour_html_a4749608c38ad87961713fc097014e9f1"><div class="ttname"><a href="class_tour.html#a4749608c38ad87961713fc097014e9f1">Tour::Tour</a></div><div class="ttdeci">Tour(Couleur couleur, string nom, Square position)</div><div class="ttdef"><b>Definition:</b> Variant.cc:178</div></div>
+<div class="ttc" id="aclass_tour_html_a6d692d4b1a687bf34f6b38828d86512e"><div class="ttname"><a href="class_tour.html#a6d692d4b1a687bf34f6b38828d86512e">Tour::~Tour</a></div><div class="ttdeci">~Tour()</div><div class="ttdef"><b>Definition:</b> Variant.cc:186</div></div>
+<div class="ttc" id="aclass_tour_html_a7fb7fb3336c3541853ee0f039331ff54"><div class="ttname"><a href="class_tour.html#a7fb7fb3336c3541853ee0f039331ff54">Tour::est_mouvement_legal</a></div><div class="ttdeci">virtual bool est_mouvement_legal(Echiquier &amp;e, Square const &amp;position)</div><div class="ttdoc">vérifie si un mouvement est légal, cette méthode est commune à toutes les pièces</div><div class="ttdef"><b>Definition:</b> Variant.cc:248</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
