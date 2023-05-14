@@ -58,13 +58,13 @@ La fonctionnalité suivante n'est pas fonctionnelle du tout:
 
 * Remarques:
 
-- Pour le mouvement du roque, je vérifie uniquement que le roi et la tour impliquée n'ont jamais bougé. 
+1. Pour le mouvement du roque, je vérifie uniquement que le roi et la tour impliquée n'ont jamais bougé. 
 
-- La fonctionnalité Pat n'est pas complètement fonctionnelle car je n'ai pas implémenté la règle des 3 positions répétées sucessivement, ni celle des 50 coups joués sans prise.
+2. La fonctionnalité Pat n'est pas complètement fonctionnelle car je n'ai pas implémenté la règle des 3 positions répétées sucessivement, ni celle des 50 coups joués sans prise.
 
-- La fonctionnalité Mat n'est pas pleinement fonctionnelle car je n'effectue pas toutes les vérifications nécessaires pour savoir si le roi est bel et bien en échec et mat. J'en parlerai dans la section concernant les difficultés rencontrées.
+3. La fonctionnalité Mat n'est pas pleinement fonctionnelle car je n'effectue pas toutes les vérifications nécessaires pour savoir si le roi est bel et bien en échec et mat. J'en parlerai dans la section concernant les difficultés rencontrées.
 
-- En ce qui concerne la fonctionnalité Prise en passant, j'ai réussi à coder dans la méthode "mouvement légal" du pion un algorithme qui vérifie si l'on peut effectuer ce mouvement, cependant je n'ai pas réussi à vérifier si un pion a avancé de deux cases, cela est peut-être du à la modélisation de mes classes. Par conséquent, j'ai dû m'abstenir de cette fonctionnalité.
+4. En ce qui concerne la fonctionnalité Prise en passant, j'ai réussi à coder dans la méthode "mouvement légal" du pion un algorithme qui vérifie si l'on peut effectuer ce mouvement, cependant je n'ai pas réussi à vérifier si un pion a avancé de deux cases, cela est peut-être du à la modélisation de mes classes. Par conséquent, j'ai dû m'abstenir de cette fonctionnalité.
 
 ## Conception du programme et difficultés rencontrées
 
@@ -91,29 +91,29 @@ Ce projet m'a permis de mieux comprendre les concepts de la programmation orient
 * Tests 1 (failed tests): Aucun
 
 * Tests 2 (failed tests):              
-- data/2-leg-chess-1.txt_(position) 
-- data/2-leg-chess-1.txt_(result) 
-- data/2-ill-chess-1.txt_(position) 
-- data/2-ill-chess-1.txt_(result) 
-- data/2-ill-move-after-chess.txt_(position) 
-- data/2-ill-move-after-chess.txt_(result) 
+1. data/2-leg-chess-1.txt_(position) 
+1.1. data/2-leg-chess-1.txt_(result) 
+2. data/2-ill-chess-1.txt_(position) 
+2.1. data/2-ill-chess-1.txt_(result) 
+3. data/2-ill-move-after-chess.txt_(position) 
+3.1. data/2-ill-move-after-chess.txt_(result) 
 
 * Tests 3 (failed tests):              
-- data/3-leg-pawn-passing.txt_(position) 
-- data/3-ill-qside-castling-1.txt_(position) 
-- data/3-ill-qside-castling-2.txt_(position) 
+1. data/3-leg-pawn-passing.txt_(position) 
+2. data/3-ill-qside-castling-1.txt_(position) 
+3. data/3-ill-qside-castling-2.txt_(position) 
 
 * Tests 4 (failed tests):
 
-- data/4-leg-mat-berger.txt_(result) 
-- data/4-leg-mat-decouv.txt_(position) 
-- data/4-leg-mat-parade.txt_(position) 
-- data/4-leg-pat.txt_(result) 
+1. data/4-leg-mat-berger.txt_(result) 
+2. data/4-leg-mat-decouv.txt_(position) 
+3. data/4-leg-mat-parade.txt_(position) 
+4. data/4-leg-pat.txt_(result) 
 
 * Remarques:
-    - Certains tests 2 échouent à cause de ma méthode qui détecte le mat, car elle n'effectue pas toutes les vérifications pour savoir si c'est un échec et mat.
-    - En ce qui concerne les tests 3, les tests concernant le roque échouent parce que je ne vérifie pas si le roi a été en échec avant ou après ce mouvement.
-    - Pour les tests 4, il faudra supprimer le test 4-leg-mat-1.txt pour pouvoir exécuter tous les autres. Et certains tests 4 échouent également en raison de ma métohode qui détecte le mat.
+    1. Certains tests 2 échouent à cause de ma méthode qui détecte le mat, car elle n'effectue pas toutes les vérifications pour savoir si c'est un échec et mat.
+    2. En ce qui concerne les tests 3, les tests concernant le roque échouent parce que je ne vérifie pas si le roi a été en échec avant ou après ce mouvement.
+    3. Pour les tests 4, il faudra supprimer le test 4-leg-mat-1.txt pour pouvoir exécuter tous les autres. Et certains tests 4 échouent également en raison de ma métohode qui détecte le mat.
 
 ### Auteur
 
