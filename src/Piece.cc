@@ -46,11 +46,9 @@ void Piece::mouvement(Echiquier &e, Square const &position) {
     }
 
     // pion
-
     e.pose_piece(this, position);
     e.pose_piece(NULL, getPosition());
     this->setPosition(position);
-
     this->setDeplace(true);
 }
 
@@ -58,56 +56,51 @@ bool Piece::getDeplace() { return this->deplace; }
 
 void Piece::setDeplace(bool status) { this->deplace = status; }
 
-void Piece::promotion(Echiquier &e, Square const &pos) {
+int Piece::promotion(Echiquier &e, Square const &pos) {
 
     Piece *p = e.getPiece(pos);
     string nom1 = p->to_string();
+    int retour = 0;
     if (p->getCouleur() == Blanc) {
         if (pos.getX() == 7 && e.getPiece(pos) != NULL) {
 
             int fin = 0;
             while (fin != 1) {
 
-                char c = ' ';
+                string piece_promotion = "";
                 cout << "En quelle pièce vous voulez promouvoir votre pion?"
                      << endl;
                 cout << "{Q,R,B,K} pour respectivement promouvoir en Reine, "
                         "Tour, Fou, Cavalier. "
                      << endl;
-                cin >> c;
 
-                if (c == '/' && cin.peek() == 'q') {
-                    fin = 0;
-                    break;
-                }
-                switch (c) {
-                case 'Q':
-
+                cin >> piece_promotion;
+                if (piece_promotion == "Q") {
                     p = new Dame(Blanc, "\u2655",
                                  Square(pos.getX(), pos.getY()));
                     fin = 1;
-                    break;
-                case 'R':
+                } else if (piece_promotion == "R") {
                     p = new Tour(Blanc, "\u2656",
                                  Square(pos.getX(), pos.getY()));
                     fin = 1;
-                    break;
-                case 'B':
+                } else if (piece_promotion == "B") {
                     p = new Fou(Blanc, "\u2657",
                                 Square(pos.getX(), pos.getY()));
                     fin = 1;
-                    break;
-                case 'K':
+                } else if (piece_promotion == "N") {
                     p = new Cavalier(Blanc, "\u2658",
                                      Square(pos.getX(), pos.getY()));
                     fin = 1;
-                    break;
-                default:
+                } else if (piece_promotion == "/quit") {
+                    retour = 1;
+                    fin = 1;
+                    continue;
+                } else {
                     fin = 0;
                     cout << "Option invalide" << endl;
-                    break;
                 }
             }
+
             e.pose_piece(p, pos);
             cout << nom1 << " promu en " << p->to_string() << endl;
         }
@@ -117,47 +110,41 @@ void Piece::promotion(Echiquier &e, Square const &pos) {
             int fin = 0;
             while (fin != 1) {
 
-                char c = ' ';
+                string piece_promotion = "";
                 cout << "En quelle pièce vous voulez promouvoir votre pion?"
                      << endl;
                 cout << "{Q,R,B,K} pour respectivement promouvoir en Reine, "
                         "Tour, Fou, Cavalier. "
                      << endl;
-                cin >> c;
+                cin >> piece_promotion;
 
-                if (c == '/' && cin.peek() == 'q') {
-                    fin = 0;
-                    break;
-                }
-                switch (c) {
-                case 'Q':
-
+                if (piece_promotion == "Q") {
                     p = new Dame(Noir, "\u265B",
                                  Square(pos.getX(), pos.getY()));
                     fin = 1;
-                    break;
-                case 'R':
+                } else if (piece_promotion == "R") {
                     p = new Tour(Noir, "\u265C",
                                  Square(pos.getX(), pos.getY()));
                     fin = 1;
-                    break;
-                case 'B':
+                } else if (piece_promotion == "B") {
                     p = new Fou(Noir, "\u265D", Square(pos.getX(), pos.getY()));
                     fin = 1;
-                    break;
-                case 'K':
+                } else if (piece_promotion == "N") {
                     p = new Cavalier(Noir, "\u265E",
                                      Square(pos.getX(), pos.getY()));
                     fin = 1;
-                    break;
-                default:
+                } else if (piece_promotion == "/quit") {
+                    retour = 1;
+                    fin = 1;
+                } else {
                     fin = 0;
                     cout << "Option invalide" << endl;
-                    break;
                 }
             }
+
             e.pose_piece(p, pos);
             cout << nom1 << " promu en " << p->to_string() << endl;
         }
     }
+    return retour;
 }

@@ -127,7 +127,9 @@ void Jeu::joue() {
                                          << p->to_string() << " " << orig
                                          << dest << endl;
                                     if (p->to_string() == "\u2659") {
-                                        p->promotion(e, position);
+                                        if ((p->promotion(e, position)) == 1) {
+                                            finir(true);
+                                        }
                                     }
                                 }
                             } else
@@ -148,6 +150,7 @@ void Jeu::joue() {
                             }
                         } else {
                             if (e.detecter_pat(Noir))
+
                                 cout << "Match null";
                         }
                     } ////////////////////////
@@ -217,13 +220,27 @@ void Jeu::joue() {
                             position.conversion(dest);
                             if (p->est_mouvement_legal(e, position)) {
                                 bool status = p->getDeplace();
+                                bool has_piece = false;
+                                Piece *piece_ancienne = e.getPiece(position);
+                                if (piece_ancienne != NULL) {
+
+                                    has_piece = true;
+                                }
+
                                 p->mouvement(e, position);
                                 if (e.detecter_echec(Noir)) {
                                     cerr << "ce mouvement met le roi en "
                                             "échec";
+
                                     position.conversion(orig);
                                     p->mouvement(e, position);
                                     p->setDeplace(status);
+
+                                    if (has_piece) {
+                                        position.conversion(dest);
+
+                                        e.pose_piece(piece_ancienne, position);
+                                    }
                                 } else {
 
                                     joueur = 1;
@@ -231,7 +248,9 @@ void Jeu::joue() {
                                          << p->to_string() << " " << orig
                                          << dest << endl;
                                     if (p->to_string() == "\u265F") {
-                                        p->promotion(e, position);
+                                        if (p->promotion(e, position) == 1) {
+                                            finir(true);
+                                        }
                                     }
                                 }
                             } else

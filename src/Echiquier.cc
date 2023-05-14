@@ -216,7 +216,7 @@ bool Echiquier::detecter_mat(Couleur Couleur) {
     Piece *roi = getRoi(Couleur);
     Square p = roi->getPosition();
     Square p_echec;
-    bool res = false;
+    bool resultat = false;
     for (int i(0); i < NBCOL; i++) {
         for (int j(0); j < NBCOL; j++) {
             Square position(i, j);
@@ -224,7 +224,7 @@ bool Echiquier::detecter_mat(Couleur Couleur) {
             if (roi->est_mouvement_legal(*this, position)) {
                 roi->mouvement(*this, position);
 
-                bool res1 = false;
+                bool on_echec = false;
                 Piece *roi1 = getRoi(Couleur);
                 for (int i1(0); i1 < NBCOL; i1++) {
                     for (int j1(0); j1 < NBCOL; j1++) {
@@ -233,8 +233,7 @@ bool Echiquier::detecter_mat(Couleur Couleur) {
                                 if (echiquier[i1][j1]->est_mouvement_legal(
                                         *this, roi1->getPosition())) {
                                     p_echec.setSquare(i1, j1);
-                                    // cout<<p_echec.to_string()<<endl;
-                                    res1 = true;
+                                    on_echec = true;
                                     break;
                                 }
                             }
@@ -242,21 +241,21 @@ bool Echiquier::detecter_mat(Couleur Couleur) {
                     }
                 }
 
-                if (res1 == true) {
+                if (on_echec == true) {
                     if (enlever_check(p_echec, Couleur) == true) {
-                        res = false;
+                        resultat = false;
                         break;
                     } else {
-                        res = true;
+                        resultat = true;
                     }
                 }
                 roi->mouvement(*this, p);
             }
         }
     }
-    return res;
-}
 
+    return resultat;
+}
 bool Echiquier::detecter_pat(Couleur Couleur) {
     for (int i(0); i < NBCOL; i++) {
         for (int j(0); j < NBCOL; j++) {
@@ -321,7 +320,7 @@ bool Echiquier::executer_petitroque(Couleur Couleur) {
                         ->est_mouvement_legal(*this, Square(7, 5)) == true) {
 
                     roi->mouvement(*this, Square(7, 6));
-                    getPiece(Square(7, 7))->mouvement(*this, Square(0, 5));
+                    getPiece(Square(7, 7))->mouvement(*this, Square(7, 5));
                     return true;
                 }
             }
@@ -341,8 +340,8 @@ bool Echiquier::executer_grandroque(Couleur Couleur) {
                 if (getPiece(Square(0, 0))
                         ->est_mouvement_legal(*this, Square(0, 2)) == true) {
 
-                    roi->mouvement(*this, Square(0, 1));
-                    getPiece(Square(0, 0))->mouvement(*this, Square(0, 2));
+                    roi->mouvement(*this, Square(0, 2));
+                    getPiece(Square(0, 0))->mouvement(*this, Square(0, 3));
                     return true;
                 }
             }
@@ -356,8 +355,8 @@ bool Echiquier::executer_grandroque(Couleur Couleur) {
                 if (getPiece(Square(7, 0))
                         ->est_mouvement_legal(*this, Square(7, 2)) == true) {
 
-                    roi->mouvement(*this, Square(7, 1));
-                    getPiece(Square(7, 0))->mouvement(*this, Square(7, 2));
+                    roi->mouvement(*this, Square(7, 2));
+                    getPiece(Square(7, 0))->mouvement(*this, Square(7, 3));
                     return true;
                 }
             }

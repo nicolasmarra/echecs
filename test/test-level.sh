@@ -8,6 +8,7 @@ COMMENT_CHAR="#"
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
+YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
 
@@ -41,10 +42,17 @@ rm -rf $LOG
 
 leg_games=$(ls -1 ${DATA}/${level}-leg-*.txt 2>/dev/null)
 ill_games=$(ls -1 ${DATA}/${level}-ill-*.txt 2>/dev/null)
+# check we could find at least one test game
+if [ -z "$leg_games" ] && [ -z "$ill_games" ]; then
+    echo "* Error : no test games found for this level in directory: $(pwd)/${DATA}"
+    echo "* -> check you run $(basename $0) just above the data directory containing the games."
+    exit 1
+fi
+
 failed_tests=""
 for g in $leg_games $ill_games
 do
-	echo $g | tee -a $LOG
+	printf "${YELLOW}> $g${NC}\n" | tee -a $LOG
 	>&2 echo "* Testing ========== $g " | tee -a $LOG
 	grep -v $COMMENT_CHAR $g | "${CHESS_PROG}" >>  $LOG
 	retcode=$?

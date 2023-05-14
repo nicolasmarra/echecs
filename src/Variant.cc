@@ -51,7 +51,7 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
                     // Si le pion avance de deux cases et n'est pas en train de
                     // prendre une pièce, il peut être pris en passant par un
                     // pion adverse
-                    cout << "Double pas Blanc" << endl;
+                    // cout << "Double pas Blanc" << endl;
                     setDouble_pas(true);
                 }
                 // Les pions blancs commencent à la ligne 2, alors
@@ -80,7 +80,7 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
                     // Si le pion avance de deux cases et n'est pas en train de
                     // prendre une pièce, il peut être pris en passant par un
                     // pion adverse
-                    cout << "Double pas Noir" << endl;
+                    // cout << "Double pas Noir" << endl;
                     setDouble_pas(true);
                 }
             }
@@ -101,6 +101,7 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
         }
     }
 
+    /*
     // Prise en passant
     if (getCouleur() == Blanc) {
 
@@ -161,6 +162,8 @@ bool Pion::est_mouvement_legal(Echiquier &e, Square const &position) {
         }
     }
     //
+
+    */
     return false;
 }
 
@@ -265,7 +268,7 @@ bool Cavalier::est_mouvement_legal(Echiquier &e, Square const &position) {
     int comparex = abs(getPosition().getX() - position.getX());
     int comparey = abs(getPosition().getY() - position.getY());
 
-    // Se le min entre comparex et  comparey est égal à 1 et le max égal à 2,
+    // Si le min entre comparex et  comparey est égal à 1 et le max égal à 2,
     // donc le mouvement est légal vu que le cavalier se déplace en L
 
     if (min(comparex, comparey) == 1 && max(comparex, comparey) == 2)

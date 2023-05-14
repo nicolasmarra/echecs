@@ -19,4 +19,3 @@ c8f5
 /quit
 
 wR,wN,,wQ,wK,wB,wN,wR,wP,wP,wP,,wP,wP,wP,wP,,,,,,,,,,,,wP,,,,wB,,,,bP,,bB,,,,,,,,bP,,,bP,bP,bP,,bP,,bP,bP,bR,bN,,bQ,bK,bB,bN,bR, ?-?
-wR,wN,,wQ,wK,wB,wN,wR,wP,wP,wP,,wP,wP,wP,wP,,,,,,,,,,,,wP,,,,wB,,,,bP,,bB,,,,,,,,bP,,,bP,bP,bP,,bP,,bP,bP,bR,bN,,bQ,bK,bB,bN,bR,
