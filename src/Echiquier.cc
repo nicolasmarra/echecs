@@ -8,6 +8,8 @@
 using namespace std;
 
 Echiquier::Echiquier() {
+
+    // allocations de toutes les pièces sauf les pions
     alloc_mem_echiquier();
     roiBlanc = new Roi(Blanc, "\u2654", Square(0, 4));
     piecesb[0] = new Tour(Blanc, "\u2656", Square(0, 0));
@@ -35,6 +37,7 @@ Echiquier::Echiquier() {
         pionsn[i] = new Pion(Noir, "\u265F", Square(6, i));
     }
 
+    // on pose les pièces dans leur respectives positions
     for (unsigned char i(0); i < NBCOL; i++) {
 
         pose_piece(piecesb[i], piecesb[i]->getPosition());
@@ -151,6 +154,7 @@ string Echiquier::pgn_piece_name(string const name, bool view_pawn,
         return "";
 }
 
+// cette méthode permet de vérifier si une case est vide
 bool Echiquier::est_case_vide(Square const &position) const {
 
     if (this->getPiece(position) == NULL)
@@ -173,27 +177,35 @@ string Echiquier::canonical_position() const {
     return output;
 }
 
+// cette méthode permet de détecter si le roi est en échec
 bool Echiquier::detecter_echec(Couleur Couleur) {
+
     Piece *roi = getRoi(Couleur);
+
+    // On parcourt chaque pièce de la couleur adverse et on vérifie si elle peut
+    // atteindre le roi de la couleur donnée en argument.
     for (int i(0); i < NBCOL; i++) {
         for (int j(0); j < NBCOL; j++) {
             if (echiquier[i][j] != NULL) {
                 if (echiquier[i][j]->getCouleur() != Couleur) {
                     if (echiquier[i][j]->est_mouvement_legal(
                             *this, roi->getPosition())) {
-                        // Square p(i,j);
-                        /*cerr << "\033[0;31m"<<echiquier[i][j]->to_string()<<"
-                           en "<<p.to_string()<< "\033[0m"
-                             << endl;*/
+
+                        // Si une pièce adverse peut atteindre le roi, alors le
+                        // roi est en échec.
                         return true;
                     }
                 }
             }
         }
     }
+
+    // Si aucune pièce n'est atteindre le roi, alors il n'est pas en échec.
     return false;
 }
 
+// cette méthode permet de vérifier si après le mouvement d'une pièce le roi
+// reste toujours en échec
 bool Echiquier::enlever_check(Square const &position, Couleur Couleur) {
 
     for (int i(0); i < NBCOL; i++) {
@@ -213,17 +225,29 @@ bool Echiquier::enlever_check(Square const &position, Couleur Couleur) {
 }
 
 bool Echiquier::detecter_mat(Couleur Couleur) {
+
+    // on récupère la position du roi de la couleur passée en argument
+
     Piece *roi = getRoi(Couleur);
     Square p = roi->getPosition();
     Square p_echec;
     bool resultat = false;
+
+    // on parcourt toutes les cases de l'échiquier
+
     for (int i(0); i < NBCOL; i++) {
         for (int j(0); j < NBCOL; j++) {
             Square position(i, j);
 
+            // Pour chaque case on
+            // vérifie si le roi peut s'y déplacer.
             if (roi->est_mouvement_legal(*this, position)) {
+                //   Si c'est le cas, on simule
+                // le déplacement du roi à cette position
                 roi->mouvement(*this, position);
 
+                // Et pour chaque pièce  de l'adversaire, on vérifie si elle
+                // peut attaquer le roi à sa nouvelle position.
                 bool on_echec = false;
                 Piece *roi1 = getRoi(Couleur);
                 for (int i1(0); i1 < NBCOL; i1++) {
@@ -249,6 +273,7 @@ bool Echiquier::detecter_mat(Couleur Couleur) {
                         resultat = true;
                     }
                 }
+                // on remet le roi à sa position initiale
                 roi->mouvement(*this, p);
             }
         }
@@ -256,6 +281,7 @@ bool Echiquier::detecter_mat(Couleur Couleur) {
 
     return resultat;
 }
+
 bool Echiquier::detecter_pat(Couleur Couleur) {
     for (int i(0); i < NBCOL; i++) {
         for (int j(0); j < NBCOL; j++) {
